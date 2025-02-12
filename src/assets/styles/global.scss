@@ -3,11 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", serif;
+
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
 }
 
 input, button {
