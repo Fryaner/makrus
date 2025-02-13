@@ -36,7 +36,7 @@ import Title from '@/components/title/index.vue'
             </div>
             <div class="defangers-2">
                 <div class="defangers-2__image">
-                    <img src="@/assets/images/image2.png" alt=""/>
+                    <img src="@/assets/images/image1.png" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Обезжилезование и умягчение 2 в 1</h3>
