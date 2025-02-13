@@ -6,8 +6,6 @@ export const useCounterStore = defineStore('counter', () => {
 
     function openBurgerMenu() {
         isActive.value = !isActive.value
-        document.body.classList.toggle('active')
-        document.documentElement.classList.toggle('active')
     }
   
     return { isActive, openBurgerMenu }
