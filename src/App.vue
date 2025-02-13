@@ -4,105 +4,13 @@ import Header from '@/components/header/index.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
       <Header/>
-      <RouterView/>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>      
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>      
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>      
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>      
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-      <p>f</p>
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+      <main class="main">      
+        <RouterView/>
+      </main>
 </template>
-
 <style scoped>
+  .main {
+    padding: 0 10px;
+  }
 </style>

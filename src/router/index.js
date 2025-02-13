@@ -1,7 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-const routes = [
+const MainPage = () => import('@/components/pages/mainPage.vue');
 
+const routes = [
+  {path: '/', component: MainPage}
 ]
 
 const router = createRouter({

@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import { useCounterStore } from '@/store/index'
 
-const isActive = ref(false)
-
-function openBurgerMenu() {
-    isActive.value = !isActive.value
-    console.log('f')
-}
+const store = useCounterStore()
 </script>
 
 <template>
@@ -20,7 +15,7 @@ function openBurgerMenu() {
             </div>
         </div>
         <nav class="header__nav ">
-            <ul class="header__list" :class="{active: isActive}">
+            <ul class="header__list" :class="{active: store.isActive}">
                 <li class="header__link"><RouterLink to="">Главная</RouterLink></li>
                 <li class="header__link"><RouterLink to="">О компании</RouterLink></li>
                 <li class="header__link"><RouterLink to="">Контакты</RouterLink></li>
@@ -28,17 +23,17 @@ function openBurgerMenu() {
                 <li class="header__link"><RouterLink to="">Доставка и оплата</RouterLink></li>
             </ul>
         </nav>
-        <div class="header__contacts" :class="{active: isActive}">
+        <div class="header__contacts" :class="{active: store.isActive}">
             <div class="header__phone-mail">
                 <a class="header__mail" href="mailto:ooo.makrus@mail.ru">ooo.makrus@mail.ru</a>
                 <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
             </div>
             <button class="header__btn">Заказать звонок специалиста</button>
         </div>
-        <div class="burger" @click="openBurgerMenu">
-            <p class="burger__top" :class="{active: isActive}"></p>
-            <p class="burger__middle" :class="{active: isActive}"></p>
-            <p class="burger__bottom" :class="{active: isActive}"></p>
+        <div class="burger" @click="store.openBurgerMenu">
+            <p class="burger__top" :class="{active: store.isActive}"></p>
+            <p class="burger__middle" :class="{active: store.isActive}"></p>
+            <p class="burger__bottom" :class="{active: store.isActive}"></p>
         </div>
     </header>
 </template>
@@ -46,18 +41,16 @@ function openBurgerMenu() {
 <style lang="scss" scoped>
 .burger {
     display: none;
-    width: 50px;
+    width: 35px;
     height: 20px;
     position: relative;
 
-    @media screen and (max-width: $tablet-max-width){
-        display: block;
-    }
 
     @media screen and (max-width: $mobile-max-width){
+        display: block;
         &__top {
             &.active {
-                top: 8px;
+                top: 9px;
                 transform: rotate(45deg);
             }
         }
@@ -68,7 +61,7 @@ function openBurgerMenu() {
         }
         &__bottom {
             &.active {
-                bottom: 8px;
+                bottom: 9px;
                 transform: rotate(-45deg);
             }
         }
@@ -108,10 +101,21 @@ function openBurgerMenu() {
     }
     &__title {
         font-size: 18px;
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 14px;
+        }
     }
     &__sub-title {
         font-size: 14px;
         color: $color-light-blue;
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 10px;
+        }
+        @media screen and (max-width: $mobile-max-width){
+            font-size: 12px;
+        }
     }
     &__list {
         display: flex;
@@ -129,14 +133,13 @@ function openBurgerMenu() {
         }
 
         @media screen and (max-width: $mobile-max-width){
-            padding-top: 100px;
             display: flex;
             position: absolute;
             right: 0;
             flex-direction: column;
             width: 100%;
             height: 100%;
-            top: 0;
+            top: 100px;
             background-color: $color-white;
             align-items: center;
             gap: 20px;
@@ -174,16 +177,17 @@ function openBurgerMenu() {
         }
         }
 
-        // @media screen and (max-width: $desctop-small-max-width){
-        //     font-size: 20px;
-        // }
-        
-
         @media screen and (max-width: $mobile-max-width){
             padding-bottom: 20px;
             border-bottom: 1px solid $color-black;
             width: 100%;
             text-align: center;
+            font-size: 16px;
+        }
+    }
+    &__contacts, &__list {
+        @media screen and (max-width: $mobile-max-width){
+            z-index: 1000;
         }
     }
     &__contacts {
@@ -192,20 +196,16 @@ function openBurgerMenu() {
 
         transition: .5s;
 
-        &.active {
-            transform: translateX(0) translateY(-150%);
-        }
-
         @media screen and (max-width: $tablet-max-width){
-            position: absolute;
-            right: 0;
-            flex-direction: column;
-            width: 100%;
-            top: 300px;
-            align-items: center;
+            flex-direction: column-reverse;
+            gap: 5px;
         }
 
         @media screen and (max-width: $mobile-max-width){
+            &.active {
+            transform: translateX(0) translateY(-150%);
+        }
+            justify-content: space-between;
             transform: translateX(100%) translateY(-150%);
             position: absolute;
             right: 0;
@@ -219,6 +219,18 @@ function openBurgerMenu() {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media screen and (max-width: $tablet-max-width){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media screen and (max-width: $mobile-max-width){
+            flex-direction: column;
+            gap: 5px;
+        }
+
     }
     &__btn {
         transition: .5s;
@@ -235,11 +247,19 @@ function openBurgerMenu() {
         &:hover {
             border: 1px solid $color-dark-blue;
             background-color: inherit;
-            color: $color-black;
+            color: $color-dark-blue;
         }
 
         @media screen and (max-width: $desctop-small-max-width){
             font-size: 16px;
+        }
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+        @media screen and (max-width: $mobile-max-width){
+            font-size: 18px;
+            padding: 10px 15px;
         }
     }
     &__mail {
@@ -247,6 +267,13 @@ function openBurgerMenu() {
         font-size: 14px;
         line-height: 15px;
         text-align: right;
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 12px;
+        }
+        @media screen and (max-width: $mobile-max-width){
+            font-size: 14px;
+        }
     }
     &__phone {
         font-size: 20px; 
@@ -255,6 +282,13 @@ function openBurgerMenu() {
 
         @media screen and (max-width: $desctop-small-max-width){
             font-size: 18px;
+        }
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 12px;
+        }
+        @media screen and (max-width: $mobile-max-width){
+            font-size: 16px;
         }
     }
 }
