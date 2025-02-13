@@ -5,38 +5,159 @@ import Title from '@/components/title/index.vue'
 <template>
     <section>
         <Title>ВИДЫ ОБЕЗЖИЛЕЗОВАНИЯ</Title>
-        <div class="defangers">
-            <div class="defangers__image">
-                <img src="@/assets/images/image1.png" alt=""/>
+        <div class="section-defangers">
+            <div class="defangers">
+                <div class="defangers__image">
+                    <img src="@/assets/images/image1.png" alt=""/>
+                </div>
+                    <div class="defangers__main">
+                        <h3 class="defangers__title">Оксидайзер</h3>
+                        <p class="defangers__description">Оксидайзер это обезжелезиватель с функцией засоса воздуха в колонну в процессе промывки. </p>           
+                    </div>
+                    <div class="defangers__other">
+                        <div class="defangers__plus">
+                            <h4 class="plus__title">Плюсы</h4>
+                            <ul class="plus__list">
+                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Компактность</li>
+                                <li class="plus__li"><img src="@/assets/icons/plus.png" alt=""/>Низкая стоимость</li>
+                            </ul>
+                        </div>
+                        <div class="defangers__minus">
+                            <h4 class="minus__title">Минусы</h4>
+                            <ul class="minus__list">
+                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Не всегда хватает воздуха для проветривания сероводорода</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="defangers__footer">
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>27 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <button class="defangers__btn">Оформить заказ</button>
+                    </div>
             </div>
-                <div class="defangers__main">
-                    <h3 class="defangers__title">Оксидайзер</h3>
-                    <p class="defangers__description">Оксидайзер это обезжелезиватель с функцией засоса воздуха в колонну в процессе промывки. </p>           
+            <div class="defangers-2">
+                <div class="defangers-2__image">
+                    <img src="@/assets/images/image2.png" alt=""/>
                 </div>
-                <div class="defangers__other">
-                    <div class="defangers__plus">
-                        <h4 class="plus__title">Плюсы</h4>
-                        <ul class="plus__list">
-                            <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Компактность</li>
-                            <li class="plus__li"><img src="@/assets/icons/plus.png" alt=""/>Низкая стоимость</li>
-                        </ul>
+                    <div class="defangers__main">
+                        <h3 class="defangers__title">Обезжилезование и умягчение 2 в 1</h3>
+                        <p class="defangers__description">2 в 1 это Классический умягчитель со специальной многокомпонентной засыпкой которая убирает из воды железо и соли жесткости (накипь, налёт на сантехнике).</p>           
                     </div>
-                    <div class="defangers__minus">
-                        <h4 class="minus__title">Минусы</h4>
-                        <ul class="minus__list">
-                            <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Не всегда хватает воздуха для проветривания сероводорода</li>
-                        </ul>
+                    <div class="defangers__other">
+                        <div class="defangers__plus">
+                            <h4 class="plus__title">Плюсы</h4>
+                            <ul class="plus__list">
+                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Универсальность</li>
+                            </ul>
+                        </div>
+                        <div class="defangers__minus">
+                            <h4 class="minus__title">Минусы</h4>
+                            <ul class="minus__list">
+                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Малый срок службы засыпки 1-2 года.</li>
+                            </ul>
+                        </div>
                     </div>
+                    <div class="defangers__footer">
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <button class="defangers__btn">Оформить заказ</button>
+                    </div>
+            </div>
+            <div class="defangers">
+                <div class="defangers__image">
+                    <img src="@/assets/images/image3.png" alt=""/>
                 </div>
-                <div class="defangers__footer">
-                    <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>27 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                    <button class="defangers__btn">Оформить заказ</button>
-                </div>
+                    <div class="defangers__main">
+                        <h3 class="defangers__title">Обезжилезование с аэрацией</h3>
+                        <p class="defangers__description">Аэрация — это система подачи большого количества воздуха компрессором для активного удаления сероводорода и окисления железа. </p>           
+                    </div>
+                    <div class="defangers__other">
+                        <div class="defangers__plus">
+                            <h4 class="plus__title">Плюсы</h4>
+                            <ul class="plus__list">
+                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Высокая производительность</li>
+                            </ul>
+                        </div>
+                        <div class="defangers__minus">
+                            <h4 class="minus__title">Минусы</h4>
+                            <ul class="minus__list">
+                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Высокая стоимость</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Высокий уровень шума от компрессора</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="defangers__footer">
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>62 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <button class="defangers__btn">Оформить заказ</button>
+                    </div>
+            </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
+.section-defangers {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @media screen and (max-width: $mobile-max-width) {
+        gap: 60px;
+    }
+}
+.defangers-2 {
+    display: grid;
+
+    grid-template-areas: 
+            "Main Img" 
+            "Other Img"
+            "Other Img"
+            "Footer Img";
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+
+    @media screen and (max-width: $mobile-max-width) {
+            grid-template-areas: 
+            "Main"
+            "Img"
+            "Other"
+            "Footer";
+            grid-template-columns: 1fr;
+
+            gap: 30px;
+    }
+
+    &__image {
+        background-image: url('@/assets/images/bg4.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: Img;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: 65%;
+
+        @media screen and (max-width: $mobile-max-width) {
+            background-size: 55%;
+        }
+
+        img {
+            max-width: 360px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @media screen and (max-width: $mobile-max-width) {
+                grid-template-areas: 
+                "Main"
+                "Img"
+                "Other"
+                "Footer";
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+        }
+    }
+}
 .defangers {
     display: grid;
 
@@ -46,10 +167,7 @@ import Title from '@/components/title/index.vue'
             "Img Other"
             "Img Footer";
     grid-template-columns: 1fr 1fr;
-
-    @media screen and (max-width: $tablet-max-width) {
-            gap: 50px;
-    }
+    gap: 50px;
 
     @media screen and (max-width: $mobile-max-width) {
             grid-template-areas: 
