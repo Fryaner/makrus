@@ -4,13 +4,9 @@ import Header from '@/components/header/index.vue';
 </script>
 
 <template>
-      <Header/>
-      <main class="main">      
-        <RouterView/>
-      </main>
+      <Header/>  
+      <RouterView/>
 </template>
 <style scoped>
-  .main {
-    padding: 0 10px;
-  }
+
 </style>

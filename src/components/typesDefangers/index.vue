@@ -235,7 +235,7 @@ import Title from '@/components/title/index.vue'
             align-items: center;
             gap: 10px;
             border-radius: 5px;
-            box-shadow: 4px 4px 10px 2px $color-black;
+            box-shadow: 4px 4px 10px 2px #31393c50;
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
@@ -265,7 +265,7 @@ import Title from '@/components/title/index.vue'
             align-items: center;
             gap: 10px;
             border-radius: 5px;
-            box-shadow: 4px 4px 10px 2px $color-black;
+            box-shadow: 4px 4px 10px 2px #31393c50;
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {

@@ -4,8 +4,14 @@ import TypeDefangers from '@/components/typesDefangers/index.vue'
 </script>
 
 <template>
-    <main>
-        <Banner/>
+    <Banner/>
+    <main class="main">
         <TypeDefangers/>   
     </main>
 </template>
+
+<style lang="scss" scoped>
+  .main {
+    padding: 0 10px;
+  }
+</style>
