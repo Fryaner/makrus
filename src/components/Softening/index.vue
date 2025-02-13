@@ -8,7 +8,7 @@ import Title from '@/components/title/index.vue'
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
-                    <img src="@/assets/images/image2.png" alt=""/>
+                    <img src="@/assets/images/image2.png" alt="d"/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Классический умягчитель</h3>
