@@ -3,17 +3,25 @@
 
 <template>
     <div class="title">
-        <h2 class="title__title"><slot></slot></h2>
-        <div class="line"></div>
+        <div class="title__info">
+            <h2 class="title__title"><slot name="title"></slot></h2>
+            <div class="line"></div>
+        </div>
+        <h3 class="title__sub-title"><slot name="sub-title"></slot></h3>
     </div>
 </template>
 
 <style lang="scss" scoped>
     .title {
         display: flex;
-        align-items: center;
-        gap:15px;
+        flex-direction: column;
         padding: 50px 0 50px 0;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            gap:15px;
+        }
 
         &__title {
             font-size: 28px;
@@ -26,6 +34,18 @@
                 font-size: 20px;
             }
         }
+
+        &__sub-title {
+        color: $color-light-blue;
+        font-size: 20px;
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 16px;
+        }
+        @media screen and (max-width: $mobile-max-width){
+            font-size: 12px;
+        }
+    }
     }
 
     .line {

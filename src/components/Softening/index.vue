@@ -1,10 +1,9 @@
 <script setup>
-import Title from '@/components/title/index.vue'
 </script>
 
 <template>
     <section>
-        <Title>УМЯГЧЕНИЕ</Title>
+        <Title><template #title>УМЯГЧЕНИЕ</template></Title>
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">

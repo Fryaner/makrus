@@ -1,10 +1,9 @@
 <script setup>
-import Title from '@/components/title/index.vue'
 </script>
 
 <template>
     <section>
-        <Title>ВИДЫ ОБЕЗЖИЛЕЗОВАНИЯ</Title>
+        <Title><template #title>ВИДЫ ОБЕЗЖИЛЕЗОВАНИЯ</template></Title>
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">

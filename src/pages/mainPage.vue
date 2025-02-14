@@ -3,6 +3,7 @@ import Banner from '@/components/banner/index.vue'
 import TypeDefangers from '@/components/typesDefangers/index.vue'
 import Softening from '@/components/Softening/index.vue'
 import Osmosis from '@/components/osmosis/index.vue'
+import Selected from '@/components/selected/index.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Osmosis from '@/components/osmosis/index.vue'
         <TypeDefangers/>   
         <Softening/>
         <Osmosis/>
+        <Selected/>
     </main>
 </template>
 

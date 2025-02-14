@@ -1,10 +1,9 @@
 <script setup>
-import Title from '@/components/title/index.vue'
 </script>
 
 <template>
     <section>
-        <Title>ОБРАТНЫЙ ОСМОС</Title>
+        <Title><template #title>ОБРАТНЫЙ ОСМОС</template></Title>
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
