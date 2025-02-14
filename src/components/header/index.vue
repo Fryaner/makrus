@@ -1,8 +1,23 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import { useCounterStore } from '@/store/index'
-
+import router from '@/router'
 const store = useCounterStore()
+
+
+function toHome() {
+    store.isActive = false
+    router.push({
+    path: '/'
+  })
+}
+
+function toAbout() {
+    store.isActive = false
+    router.push({
+    path: '/about'
+  })
+}
 </script>
 
 <template>
@@ -16,11 +31,11 @@ const store = useCounterStore()
         </div>
         <nav class="header__nav ">
             <ul class="header__list" :class="{active: store.isActive}">
-                <li class="header__link"><RouterLink to="">Главная</RouterLink></li>
-                <li class="header__link"><RouterLink to="">О компании</RouterLink></li>
-                <li class="header__link"><RouterLink to="">Контакты</RouterLink></li>
-                <li class="header__link"><RouterLink to="">Примеры работ</RouterLink></li>
-                <li class="header__link"><RouterLink to="">Доставка и оплата</RouterLink></li>
+                <li class="header__link"><a @click="toHome()">Главная</a></li>
+                <li class="header__link"><a @click="toAbout()">О компании</a></li>
+                <li class="header__link"><a @click="toAbout()">Контакты</a></li>
+                <li class="header__link"><a @click="toAbout()">Примеры работ</a></li>
+                <li class="header__link"><a @click="toAbout()">Доставка и оплата</a></li>
             </ul>
         </nav>
         <div class="header__contacts" :class="{active: store.isActive}">
@@ -151,6 +166,7 @@ const store = useCounterStore()
         }
     }
     &__link {
+        cursor: pointer;
         &::after {
             transition: .5s;
             content: '';
