@@ -11,11 +11,22 @@ function toHome() {
     path: '/'
   })
 }
-
 function toAbout() {
     store.isActive = false
     router.push({
     path: '/about'
+  })
+}
+function toContacts() {
+    store.isActive = false
+    router.push({
+    path: '/contacts'
+  })
+}
+function toDelivery() {
+    store.isActive = false
+    router.push({
+    path: '/delivery'
   })
 }
 </script>
@@ -33,9 +44,9 @@ function toAbout() {
             <ul class="header__list" :class="{active: store.isActive}">
                 <li class="header__link"><a @click="toHome()">Главная</a></li>
                 <li class="header__link"><a @click="toAbout()">О компании</a></li>
-                <li class="header__link"><a @click="toAbout()">Контакты</a></li>
+                <li class="header__link"><a @click="toContacts()">Контакты</a></li>
                 <li class="header__link"><a @click="toAbout()">Примеры работ</a></li>
-                <li class="header__link"><a @click="toAbout()">Доставка и оплата</a></li>
+                <li class="header__link"><a @click="toDelivery()">Доставка и оплата</a></li>
             </ul>
         </nav>
         <div class="header__contacts" :class="{active: store.isActive}">
