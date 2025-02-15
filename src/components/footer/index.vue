@@ -29,34 +29,36 @@ import { useCounterStore } from '@/store/index'
 import router from '@/router'
 const store = useCounterStore()
 
-function test() {
-    
-}
 function toHome() {
     store.isActive = false
+    window.scroll(0,0)
     router.push({
     path: '/'
   })
 }
 function toAbout() {
+    window.scroll(0,0)
     store.isActive = false
     router.push({
     path: '/about'
   })
 }
 function toContacts() {
+    window.scroll(0,0)
     store.isActive = false
     router.push({
     path: '/contacts'
   })
 }
 function toDelivery() {
+    window.scroll(0,0)
     store.isActive = false
     router.push({
     path: '/delivery'
   })
 }
 function toExample() {
+    window.scroll(0,0)
     store.isActive = false
     router.push({
     path: '/example'

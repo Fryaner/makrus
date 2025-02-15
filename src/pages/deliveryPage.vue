@@ -41,6 +41,8 @@
 
         @media screen and (max-width: $mobile-max-width){
             gap: 60px;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         &__delivery {

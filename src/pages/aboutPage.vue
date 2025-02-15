@@ -21,6 +21,12 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
+    @media screen and (max-width: $mobile-max-width){
+            gap: 60px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
     @media screen and (max-width: $mobile-max-width) {
         flex-direction: column-reverse;
         align-items: center;
