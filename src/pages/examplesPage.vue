@@ -56,6 +56,8 @@
     flex-direction: column;
     gap: 40px;
     padding: 0 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &__title {
         font-size: 28px;

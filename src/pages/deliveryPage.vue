@@ -32,6 +32,8 @@
 <style lang="scss" scoped>
     .delivery {
         padding: 0 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
         display: flex;
         flex-direction: column;
         gap: 100px;
@@ -45,7 +47,6 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            align-items: center;
 
             @media screen and (max-width: $mobile-max-width){
                 flex-direction: column;

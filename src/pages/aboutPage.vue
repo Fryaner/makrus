@@ -19,6 +19,7 @@
     justify-content: space-between;
     gap: 20px;
     padding-top: 50px;
+    padding-bottom: 50px;
 
     @media screen and (max-width: $mobile-max-width) {
         flex-direction: column-reverse;

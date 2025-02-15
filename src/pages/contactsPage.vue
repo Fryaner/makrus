@@ -41,6 +41,8 @@
     gap: 40px;
     color: $color-black;
     padding: 0 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &__title { 
         font-size: 24px;
