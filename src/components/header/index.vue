@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
 import { useCounterStore } from '@/store/index'
 import router from '@/router'
 const store = useCounterStore()

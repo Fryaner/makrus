@@ -13,17 +13,6 @@ import Selected from '@/components/selected/index.vue'
         <Softening/>
         <Osmosis/>
         <Selected/>
-        <p>fd</p>
-        <p>fd</p>
-        <p>fd</p>
-        <p>fd</p>
-        <p>fd</p>
-        <p>fd</p>
-              <p>fd</p>
-                    <p>fd</p>
-                          <p>fd</p>
-                          <p>fd</p>
-                          <p>fd</p>
     </main>
 </template>
 

@@ -2,7 +2,7 @@
     <section>
         <Title>
             <template #title>КАКИЕ СИСТЕМЫ ПОДОЙДУТ ВАМ?</template>
-            <template #sub-title>Чтобы выбрать подходящий для вас размер колонны необходимо заполнить количество человек и количество количество точек водоразбора</template>
+            <template #sub-title>Чтобы выбрать подходящий для вас размер колонны необходимо заполнить форму ниже</template>
         </Title>
         <div class="calculation">
             <div class="calculation__values">
@@ -366,6 +366,7 @@ async function calcuatedResult() {
     &__btn {
         display: flex;
         button {
+            cursor: pointer;
             padding: 15px 100px;
             font-size: 20px;
             color: $color-white;
