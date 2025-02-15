@@ -29,6 +29,12 @@ function toDelivery() {
     path: '/delivery'
   })
 }
+function toExample() {
+    store.isActive = false
+    router.push({
+    path: '/example'
+  })
+}
 </script>
 
 <template>
@@ -45,7 +51,7 @@ function toDelivery() {
                 <li class="header__link"><a @click="toHome()">Главная</a></li>
                 <li class="header__link"><a @click="toAbout()">О компании</a></li>
                 <li class="header__link"><a @click="toContacts()">Контакты</a></li>
-                <li class="header__link"><a @click="toAbout()">Примеры работ</a></li>
+                <li class="header__link"><a @click="toExample()">Примеры работ</a></li>
                 <li class="header__link"><a @click="toDelivery()">Доставка и оплата</a></li>
             </ul>
         </nav>
