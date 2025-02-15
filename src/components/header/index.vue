@@ -3,6 +3,11 @@ import { useCounterStore } from '@/store/index'
 import router from '@/router'
 const store = useCounterStore()
 
+function openModal() {
+    store.changePopUp()
+    store.changeTitile('Заказать звонок специалиста')
+    store.changeType(1)
+}
 
 function toHome() {
     store.isActive = false
@@ -59,7 +64,7 @@ function toExample() {
                 <a class="header__mail" href="mailto:ooo.makrus@mail.ru">ooo.makrus@mail.ru</a>
                 <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
             </div>
-            <button class="header__btn">Заказать звонок специалиста</button>
+            <button @click="openModal()" class="header__btn">Заказать звонок специалиста</button>
         </div>
         <div class="burger" @click="store.openBurgerMenu">
             <p class="burger__top" :class="{active: store.isActive}"></p>
@@ -129,6 +134,8 @@ function toExample() {
         display: flex;
         gap: 10px;
         align-items: center;
+        position: relative;
+        z-index: -2;
     }
     &__title {
         font-size: 18px;

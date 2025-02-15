@@ -8,24 +8,47 @@ const store = useCounterStore()
 </script>
 
 <template>
-    <div class="wrapper" :class="{active: store.isActive}">
+    <div class="wrapper" :class="[
+      {active: store.isActive}, 
+      {open:store.isOpen},
+      {overlay: store.isOverlay}
+    ]">
       <Header/>  
         <div class="flex-1">
             <RouterView/>
+            <Form></Form>
         </div>
-
       <Footer/>
     </div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 .wrapper {
+  &:after {
+    transition: .5s;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh
 }
-.wrapper.active {
+.wrapper.overlay {
+  position: relative;
+  
+    &:after {
+      background-color: black;
+      z-index: 1;
+    }
+}
+.wrapper.active, .wrapper.open {
   overflow: hidden;
   height: 100vh;
 }

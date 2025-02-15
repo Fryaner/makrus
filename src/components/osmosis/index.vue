@@ -32,7 +32,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>12 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Бытовой осмос')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
@@ -61,12 +61,24 @@
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Промышленный осмос')">Оформить заказ</button>
                     </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+
+function openModal(text) {
+    store.changePopUp()
+    store.changeTitile('Оформить заказ')
+    store.changeSubTitile(text)
+    store.changeType(1)
+}
+</script>
 
 <style lang="scss" scoped>
 .section-defangers {

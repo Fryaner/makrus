@@ -1,17 +1,32 @@
 <template>
-    <section class="banners">
+    <section class="banners" :class="{open: store.isOpen}">
         <div class="banners-wrapper">
         <div class="banners__info">
             <h2 class="banners__title">Установка и обслуживание всех видов фильтров</h2>
             <h3 class="banners__sub-title">Для получения качественных услуг по установке и обслуживанию фильтров можете смело обращаться к нашим профессиональным специалистам</h3>
         </div>
         <div class="banners__btns">
-            <button class="banners__btn-1">Получить консультацию</button>
-            <button class="banners__btn-2">Заказать расчёт</button>
+            <button @click="openModal1()" class="banners__btn-1">Получить консультацию</button>
+            <button @click="openModal2()" class="banners__btn-2">Заказать расчёт</button>
         </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+function openModal1() {
+    store.changePopUp()
+    store.changeTitile('Получить консальтацию')
+    store.changeType(1)
+}
+function openModal2() {
+    store.changePopUp()
+    store.changeTitile('Заказать расчёт')
+    store.changeType(2)
+}
+</script>
 
 <style lang="scss" scoped>
     .banners {
@@ -21,6 +36,10 @@
         z-index: 0;
         background-size: cover;
         background-repeat: no-repeat;
+
+        &.open {
+            z-index: -1;
+        }
 
         &-wrapper {
             padding: 50px 0 120px 190px;
