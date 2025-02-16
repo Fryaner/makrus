@@ -133,7 +133,7 @@ function toExample() {
                 grid-template-rows: 1fr 1fr 1fr;
                 row-gap: 15px;
                 column-gap: 30px;
-                font-size: 14px;
+                font-size: 16px;
 
 
                 @media screen and (max-width: $tablet-max-width) {

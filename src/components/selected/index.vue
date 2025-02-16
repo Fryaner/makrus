@@ -110,65 +110,104 @@ async function calcuatedResult() {
     if(!isValidate) {
         return
     }
+    result.value = []
     if (state.water === 'Скважина') {
-        if (state.iron === 'Да') {
-            result.value = []
-            result.value.push('Обезжилезиватель и фильтр грубой очистки')
-        }
-        if (state.scum === 'Да') 
-        {
-            result.value = []
-            result.value.push('Умягчитель')
-        }
-        if (state.color === 'Да') {
-            result.value = []
-            result.value.push('Угольный фильтр') 
-        }
-        if (state.smell === 'Да') {
-            result.value = []
-            result.value.push('Аэрация и угольный фильтр')
-        }
-        if (state.iron === 'Да' & state.scum === 'Да') {
-            result.value = []
-            result.value.push('Умягчитель и обезжилезиватель')
-            result.value.push('Обезжилезиватель или умягчитель 2в1')
-        }
-        if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
-            result.value = []
-            result.value.push('Обезжилезиватель и фильтр грубой очистки')
-            result.value.push('Обезжилезиватель или умягчитель 2в1')
-            result.value.push('Угольный фильтр')
-            result.value.push('Аэрация и угольный фильтр')
+        if (state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Обезжелезиватель и умягчитель');
+            result.value.push('Умягчитель2в1');
+            result.value.push('Угольный фильтр');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да') {
+            result.value.push('Обезжелезиватель и умягчитель');
+            result.value.push('Умягчитель2в1');
+            result.value.push('Угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да' && state.smell === 'Да') {
+            result.value.push('Обезжелезиватель и умягчитель');
+            result.value.push('Умягчитель2в1');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Угольный фильтр');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Умягчитель');
+            result.value.push('Угольный фильтр');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да') {
+            result.value.push('Обезжелезиватель и умягчитель');
+            result.value.push('Умягчитель 2в1 ');
+        } else if (state.iron === 'Да' && state.color === 'Да') {
+            result.value.push('Обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Угольный фильтр');
+        } else if (state.iron === 'Да' && state.smell === 'Да') {
+            result.value.push('Обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.scum === 'Да' && state.color === 'Да') {
+            result.value.push('Умягчитель');
+            result.value.push('Угольный фильтр');
+        } else if (state.scum === 'Да' && state.smell === 'Да') {
+            result.value.push('Умягчитель');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Угольный фильтр');
+            result.value.push('Аэрация и угольный фильтр');
+        } else if (state.iron === 'Да') {
+            result.value.push('Обезжелезиватель и фильтр грубой очистки');
+        } else if (state.scum === 'Да') {
+            result.value.push('Умягчитель');
+        } else if (state.color === 'Да') {
+            result.value.push('Угольный фильтр');
+        } else if (state.smell === 'Да') {
+            result.value.push('Аэрация и угольный фильтр');
         }
   } else {
-    if (state.iron === 'Да') {
-            result.value = []
-            result.value.push('Механический фильтр, обезжилезиватель и фильтр грубой очистки')
-        }
-        if (state.scum === 'Да') 
-        {
-            result.value = []
-            result.value.push('Механический фильтр, умягчитель')
-        }
-        if (state.color === 'Да') {
-            result.value = []
-            result.value.push('Механический фильтр, угольный фильтр') 
-        }
-        if (state.smell === 'Да') {
-            result.value = []
-            result.value.push('Механический фильтр, аэрация и угольный фильтр')
-        }
-        if (state.iron === 'Да' & state.scum === 'Да') {
-            result.value = []
-            result.value.push('Механический фильтр, умягчитель и обезжилезиватель')
-            result.value.push('Механический фильтр, обезжилезиватель или умягчитель 2в1')
-        }
-        if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
-            result.value = []
-            result.value.push('Механический фильтр, обезжилезиватель и фильтр грубой очистки')
-            result.value.push('Механический фильтр, обезжилезиватель или умягчитель 2в1')
-            result.value.push('Механический фильтр, угольный фильтр')
-            result.value.push('Механический фильтр, аэрация и угольный фильтр')
+    if (state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и умягчитель');
+            result.value.push('Механический фильтр, умягчитель2в1');
+            result.value.push('Механический фильтр, угольный фильтр');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и умягчитель');
+            result.value.push('Механический фильтр, умягчитель2в1');
+            result.value.push('Механический фильтр, угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и умягчитель');
+            result.value.push('Механический фильтр, умягчитель2в1');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Механический фильтр, угольный фильтр');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, умягчитель');
+            result.value.push('Механический фильтр, угольный фильтр');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.iron === 'Да' && state.scum === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и умягчитель');
+            result.value.push('Механический фильтр, умягчитель2в1');
+        } else if (state.iron === 'Да' && state.color === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Механический фильтр, угольный фильтр');
+        } else if (state.iron === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и фильтр грубой очистки');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.scum === 'Да' && state.color === 'Да') {
+            result.value.push('Механический фильтр, умягчитель');
+            result.value.push('Механический фильтр, угольный фильтр');
+        } else if (state.scum === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, умягчитель');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.color === 'Да' && state.smell === 'Да') {
+            result.value.push('Механический фильтр, угольный фильтр');
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
+        } else if (state.iron === 'Да') {
+            result.value.push('Механический фильтр, обезжелезиватель и фильтр грубой очистки');
+        } else if (state.scum === 'Да') {
+            result.value.push('Механический фильтр, умягчитель');
+        } else if (state.color === 'Да') {
+            result.value.push('Механический фильтр, угольный фильтр');
+        } else if (state.smell === 'Да') {
+            result.value.push('Механический фильтр, аэрация и угольный фильтр');
         }
   }
 }
