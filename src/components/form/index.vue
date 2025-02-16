@@ -10,7 +10,7 @@
                 <h3>{{ store.subTitle }}</h3>  
                 <h3 v-if="store.stage === 1">Где требуется установка очистки воды?</h3>
                 <h3 v-if="store.stage === 2">Источник водоснабжения?</h3>
-                <h3 v-if="store.stage === 3">Что-то ещё</h3> 
+                <h3 v-if="store.stage === 3">Проблемы с водой?</h3> 
             </div>
 
         </div>
@@ -69,7 +69,6 @@
                             <div class="form__btns">
                                 <div class="form__btns-main">
                                     <button type="button" class="form__send" :disabled="!(selectedOne || selectedOneOther)" @click="store.stage++" >Даллее</button>
-                                    <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
                                 </div>
                                 <button class="form__skip" type="button" @click="store.stage++">Пропустить вопрос</button>
                             </div>
@@ -109,23 +108,23 @@
                     <div class="form__main">
                         <div class="form__radio">
                             <label for="huey">Жёсткость (накипь)</label>
-                            <input type="checkbox" id="huey" name="Что-то ещё" value="Жёсткость (накипь)" v-model="selectedThree"/>
+                            <input type="checkbox" id="huey" name="Проблемы с водой?" value="Жёсткость (накипь)" v-model="selectedThree"/>
                         </div>
                         <div class="form__radio">
                             <label for="dewey">Железо</label>
-                            <input type="checkbox" id="dewey" name="Что-то ещё" value="Железо" v-model="selectedThree"/>
+                            <input type="checkbox" id="dewey" name="Проблемы с водой?" value="Железо" v-model="selectedThree"/>
                         </div>
                         <div class="form__radio">
                             <label for="louie">Цветность</label>
-                            <input type="checkbox" id="louie" name="Что-то ещё" value="Цветность" v-model="selectedThree"/>
+                            <input type="checkbox" id="louie" name="Проблемы с водой?" value="Цветность" v-model="selectedThree"/>
                         </div>
                         <div class="form__radio">
                             <label for="louie">Запах</label>
-                            <input type="checkbox" id="louie" name="Что-то ещё" value="Запах" v-model="selectedThree"/>
+                            <input type="checkbox" id="louie" name="Проблемы с водой?" value="Запах" v-model="selectedThree"/>
                         </div>
                         <div class="form__input">
                             <label for="other3">Другой вариант или комментарий</label>
-                            <input type="text" id="other3" name="Что-то ещё" v-model="selectedThreeOther"/>
+                            <input type="text" id="other3" name="Проблемы с водой?" v-model="selectedThreeOther"/>
                         </div>
                         <div class="form__bottom">
                             <div class="form__btns">
