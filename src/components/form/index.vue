@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
+            <div v-else-if="store.type === 2">
                 <div v-show="store.stage === 1">
                     <div class="form__main">
                         <div class="form__radio">
@@ -166,6 +166,38 @@
                                 <input id="yes" type="checkbox" v-model="store.isSogals"/>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__main" v-else-if="store.type === 3">
+                <div class="form__input">
+                    <label :class="{ errorText: v$.name.$errors.length }" for="name">Имя</label>
+                    <input id="name" :class="{ error: v$.name.$errors.length }" type="text" name="Имя" v-model="state.name"/>
+                    <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
+                </div>
+                <div class="form__input">
+                    <label for="name">Номер телефонв</label>
+                    <input id="name" type="text" name="Номер телефона"/>
+                </div>
+                <div class="form__input">
+                    <label for="name">Email</label>
+                    <input id="name" type="text" name="Email"/>
+                </div>
+                <div class="form__input">
+                    <label for="name">Предложение</label>
+                    <input id="name" type="text" name="Пожелание"/>
+                </div>
+                <input v-show="false" v-model="store.title" name="Тип Заявки"/>
+                <div class="form__bottom">
+                    <div class="form__btns">
+                        <div class="form__btns-main">
+                            <button type="submit" class="form__send" :disabled="!store.isSogals">Отправить</button>
+                            <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
+                        </div>
+                    </div>
+                    <div class="form__yes">
+                        <label for="yes">Я соглашаюсь с <a href="">обработкой персональных данных</a></label>
+                        <input id="yes" type="checkbox" v-model="store.isSogals"/>
                     </div>
                 </div>
             </div>

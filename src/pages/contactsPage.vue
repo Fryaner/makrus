@@ -28,11 +28,22 @@
             </div>
             <div class="contacts__form">
                 <p class="contacts__invite">Мы очень рады вашим вопросам и предложениям!</p>
-                <button class="contacts__btn">Напишите нам</button>
+                <button @click="openModal()" class="contacts__btn">Напишите нам</button>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+
+function openModal() {
+    store.changePopUp()
+    store.changeTitile('Ваше предложение')
+    store.changeType(3)
+}
+</script>
 
 <style lang="scss" scoped>
 .contacts {
