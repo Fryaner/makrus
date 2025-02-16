@@ -91,12 +91,12 @@ function openModal2() {
             font-size: 20px;
 
             @media screen and (max-width: $tablet-max-width) {
-                font-size: 16px;
+                font-size: 20px;
                 text-align: center;
             }
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+                font-size: 20px;
             }
         }
 

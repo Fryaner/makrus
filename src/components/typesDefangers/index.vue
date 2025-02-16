@@ -12,7 +12,7 @@ function openModal(text) {
 
 <template>
     <section>
-        <Title><template #title>ВИДЫ ОБЕЗЖИЛЕЗОВАНИЯ</template></Title>
+        <Title><template #title>ВИДЫ ОБЕЗЖИЛЕЗИВАНИЯ</template></Title>
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
@@ -47,7 +47,7 @@ function openModal(text) {
                     <img src="@/assets/images/image2.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
-                        <h3 class="defangers__title">Обезжилезование и умягчение 2 в 1</h3>
+                        <h3 class="defangers__title">Обезжилезивание и умягчение 2 в 1</h3>
                         <p class="defangers__description">2 в 1 это Классический умягчитель со специальной многокомпонентной засыпкой которая убирает из воды железо и соли жесткости (накипь, налёт на сантехнике).</p>           
                     </div>
                     <div class="defangers__other">
@@ -75,7 +75,7 @@ function openModal(text) {
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Обезжилезование с аэрацией</h3>
-                        <p class="defangers__description">Аэрация — это система подачи большого количества воздуха компрессором для активного удаления сероводорода и окисления железа. </p>           
+                        <p class="defangers__description">Аэрация — это система подачи большого количества воздуха компрессором в воду для активного удаления сероводорода и окисления железа. </p>           
                     </div>
                     <div class="defangers__other">
                         <div class="defangers__plus">
@@ -245,13 +245,13 @@ function openModal(text) {
         font-size: 28px;
 
         @media screen and (max-width: $mobile-max-width) {
-            font-size: 20px;
+            font-size: 24px;
             text-align: center;
         }
     }
 
     &__description {
-        font-size: 16px;
+        font-size: 20px;
 
         @media screen and (max-width: $mobile-max-width) {
             text-align: center;
@@ -296,7 +296,7 @@ function openModal(text) {
 
         @media screen and (max-width: $mobile-max-width) {
             gap: 5px;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         span {
@@ -334,7 +334,7 @@ function openModal(text) {
         }
 
         @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+            font-size: 20px;
         }
     }
 }
@@ -345,7 +345,7 @@ function openModal(text) {
             font-weight: 700;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
@@ -356,6 +356,7 @@ function openModal(text) {
         }
 
         &__li {
+            font-size: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -364,7 +365,7 @@ function openModal(text) {
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }
@@ -375,7 +376,7 @@ function openModal(text) {
             font-weight: 700;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
@@ -386,6 +387,7 @@ function openModal(text) {
         }
 
         &__li {
+            font-size: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -394,7 +396,7 @@ function openModal(text) {
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }

@@ -26,9 +26,8 @@ function openModal(text) {
                         <div class="defangers__plus">
                             <h4 class="plus__title">Преимущества</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><span>1</span>Умягчение</li>
-                                <li class="plus__li"><span>2</span>Низкая стоимость</li>
-                                <li class="plus__li"><span>3</span>Большая производительность</li>
+                                <li class="plus__li"><span>1</span>Низкая стоимость</li>
+                                <li class="plus__li"><span>2</span>Большая производительность</li>
                             </ul>
                         </div>
                     </div>
@@ -49,8 +48,7 @@ function openModal(text) {
                         <div class="defangers__plus">
                             <h4 class="plus__title">Преимущества</h4>
                             <ul class="plus__list">
-                                <li class="plus__li"><span>1</span>Умягчение</li>
-                                <li class="plus__li"><span>2</span>Элегантный корпус</li>
+                                <li class="plus__li"><span>1</span>Элегантный корпус</li>
                             </ul>
                         </div>
                     </div>
@@ -207,17 +205,17 @@ function openModal(text) {
         font-size: 28px;
 
         @media screen and (max-width: $mobile-max-width) {
-            font-size: 20px;
+            font-size: 24px;
             text-align: center;
         }
     }
 
     &__description {
-        font-size: 16px;
+        font-size: 20px;
 
         @media screen and (max-width: $mobile-max-width) {
             text-align: center;
-            font-size: 16px;
+            font-size: 20px;
         }
     }
 
@@ -297,7 +295,7 @@ function openModal(text) {
         }
 
         @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+            font-size: 20px;
         }
     }
 }
@@ -308,7 +306,7 @@ function openModal(text) {
             font-weight: 700;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
@@ -320,12 +318,13 @@ function openModal(text) {
             width: 100%;
 
             @media screen and (max-width: $tablet-max-width) {
-                font-size: 18px;
+                font-size: 20px;
                 grid-template-columns: 1fr;
             }
         }
 
         &__li {
+            font-size: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -344,7 +343,7 @@ function openModal(text) {
             }
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }

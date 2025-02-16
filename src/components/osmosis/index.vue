@@ -11,7 +11,7 @@
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Бытовой осмос</h3>
-                        <p class="defangers__description">Бытовой осмос — это фильтр для питьевой воды который убирает из воды все вредоносные компоненты и бактерии.</p>           
+                        <p class="defangers__description">Бытовой осмос — это фильтр для питьевой воды который убирает из воды все вредоносные компоненты и бактерии, а так же снижает количество фторидов опасных для здоровья.</p>           
                     </div>
                     <div class="defangers__other">
                         <div class="defangers__plus">
@@ -222,13 +222,13 @@ function openModal(text) {
         font-size: 28px;
 
         @media screen and (max-width: $mobile-max-width) {
-            font-size: 20px;
+            font-size: 24px;
             text-align: center;
         }
     }
 
     &__description {
-        font-size: 16px;
+        font-size: 20px;
 
         @media screen and (max-width: $mobile-max-width) {
             text-align: center;
@@ -252,6 +252,7 @@ function openModal(text) {
         gap: 20px;
         width: 50%;
         justify-content: flex-start;
+        font-size: 20px;
 
         @media screen and (max-width: $tablet-max-width) {
             width: 100%;
@@ -273,7 +274,7 @@ function openModal(text) {
 
         @media screen and (max-width: $mobile-max-width) {
             gap: 5px;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         span {
@@ -322,7 +323,7 @@ function openModal(text) {
             font-weight: 700;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
@@ -341,7 +342,7 @@ function openModal(text) {
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }
@@ -352,7 +353,7 @@ function openModal(text) {
             font-weight: 700;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
 
