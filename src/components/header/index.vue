@@ -213,9 +213,6 @@ function toExample() {
             transform: translateX(100%);
         }
 
-        a {
-            // color: $color-black;
-        }
     }
     &__link {
         cursor: pointer;

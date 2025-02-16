@@ -122,7 +122,7 @@ function openModal(text) {
         background-size: 80%;
 
         @media screen and (max-width: $mobile-max-width) {
-            background-size: 65%;
+            background-size: contain;
         }
 
         img {
@@ -138,7 +138,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 300px;
+                max-width: 200px;
             }
         }
     }
@@ -176,7 +176,7 @@ function openModal(text) {
         background-size: 80%;
 
         @media screen and (max-width: $mobile-max-width) {
-            background-size: 65%;
+            background-size: contain;
         }
 
         img {
@@ -192,7 +192,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 300px;
+                max-width: 200px;
             }
         }
     }
@@ -232,7 +232,6 @@ function openModal(text) {
 
         @media screen and (max-width: $mobile-max-width) {
             text-align: center;
-            font-size: 14px;
         }
     }
 
@@ -342,7 +341,7 @@ function openModal(text) {
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
     }
@@ -372,7 +371,7 @@ function openModal(text) {
             padding: 15px;
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
     }
