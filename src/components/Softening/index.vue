@@ -1,4 +1,13 @@
 <script setup>
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+
+function openModal(text) {
+    store.changePopUp()
+    store.changeTitile('Оформить заказ')
+    store.changeSubTitile(text)
+    store.changeType(1)
+}
 </script>
 
 <template>
@@ -25,7 +34,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>36 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Классический умягчитель')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
@@ -47,7 +56,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Умягчитель кабинетного типа')">Оформить заказ</button>
                     </div>
             </div>
         </div>

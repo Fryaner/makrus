@@ -11,6 +11,9 @@ body {
     margin: 0 auto;
 }
 
+body.open {
+    overflow: hidden;
+}
 input, button, select {
     border: none;
     outline: none;

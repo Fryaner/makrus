@@ -1,4 +1,13 @@
 <script setup>
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+
+function openModal(text) {
+    store.changePopUp()
+    store.changeTitile('Оформить заказ')
+    store.changeSubTitile(text)
+    store.changeType(1)
+}
 </script>
 
 <template>
@@ -30,7 +39,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>27 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Оксидайзер')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
@@ -57,7 +66,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Обезжилезование и умягчение 2 в 1')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers">
@@ -85,7 +94,7 @@
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>62 000<img src="@/assets/icons/R.png" alt=""/></span></p>
-                        <button class="defangers__btn">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Обезжилезование с аэрацией')">Оформить заказ</button>
                     </div>
             </div>
         </div>

@@ -7,19 +7,28 @@
         <nav class="footer__nav">
             <h3 @click="test()">Навигация</h3>
             <ul>
-                <li><a @click="toHome()">ГЛАВНАЯ</a></li>
-                <li><a @click="toAbout()">О КОМПАНИИ</a></li>
-                <li><a @click="toContacts()">КОНТАКТЫ</a></li>
-                <li><a @click="toDelivery()">ПРИМЕРЫ РАБОТ</a></li>
-                <li><a @click="toExample()">СПОСОБЫ ОПЛАТЫ </a></li>
-                <li><a @click="toExample()">ИНСТРУКЦИИ</a></li>
+                <li>
+                    <router-link @click="toHome()" to="/">Главная</router-link>
+                </li>
+                <li>
+                    <router-link @click="toAbout()" to="/about">О компании</router-link>
+                </li>
+                <li>
+                    <router-link @click="toContacts()" to="/contacts">Контакты</router-link>
+                </li>
+                <li>
+                    <router-link @click="toExample()" to="/example">Примеры работ</router-link>
+                </li>
+                <li>
+                    <router-link @click="toDelivery()" to="/delivery">Доставка и оплата</router-link>
+                </li>
             </ul>
         </nav>
         <div class="footer__contacts">
             <h3>Контактная информация</h3>
             <a href="mailto:ooo.makrus@mail.ru" class="footer__mail"><img src="@/assets/icons/mail.png" alt=""/>ooo.makrus@mail.ru</a>
             <a href="tel:+ 79778833882" class="footer__phone"><img src="@/assets/icons/phone.png" alt=""/>+ 7  977 883 38 82</a>
-            <button>Заказать расчёт</button>
+            <button @click="openModal()">Заказать расчёт</button>
         </div>
     </footer>
 </template>
@@ -28,6 +37,12 @@
 import { useCounterStore } from '@/store/index'
 import router from '@/router'
 const store = useCounterStore()
+
+function openModal() {
+    store.changePopUp()
+    store.changeTitile('Заказать расчёт')
+    store.changeType(2)
+}
 
 function toHome() {
     store.isActive = false
@@ -67,6 +82,9 @@ function toExample() {
 </script>
 
 <style lang="scss" scoped>
+.router-link-active { 
+    color: $color-dark-blue;
+}
     .footer {
         background-color: white;
         color: $color-white;

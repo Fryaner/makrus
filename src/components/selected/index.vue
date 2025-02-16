@@ -61,12 +61,14 @@
                 <Transition name="slide-fade">
                     <div class="calculation__result" v-if="result.length">
                         <h4 class="result__title">На основе введенных  данных вам лучше всего подойдет</h4>
-                        <section class="result__info">
-                            <h5 class="result__sub-title" v-for="item of result">{{ item }}</h5>
-                            <div class="result__btn">
-                                <button>Оформить заказ</button>
-                            </div>
-                        </section>
+                        <div class="result__all">
+                            <section  v-for="item of result" class="result__info">
+                                <h5 class="result__sub-title">{{ item }}</h5>
+                                <div class="result__btn">
+                                    <button @click="openModal(item)">Оформить заказ</button>
+                                </div>
+                            </section>                      
+                        </div>
                     </div>
                 </Transition>
             </section>
@@ -78,6 +80,16 @@
 import { computed, reactive, ref } from 'vue';
 import { required } from '@vuelidate/validators'
 import { useVuelidate } from '@vuelidate/core'
+
+import { useCounterStore } from '@/store/index'
+const store = useCounterStore()
+
+function openModal(text) {
+    store.changePopUp()
+    store.changeTitile('Оформить заказ')
+    store.changeSubTitile(text)
+    store.changeType(1)
+}
 
 const state = reactive({
     iron: '',
@@ -343,6 +355,13 @@ async function calcuatedResult() {
 }
 
 .result {
+    &__all {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
     &__title {
         font-size: 24px;
         font-weight: 700;
@@ -357,6 +376,7 @@ async function calcuatedResult() {
         font-size: 20px;
         font-weight: 700;
         color: $color-black;
+        text-wrap: nowrap;
 
         @media screen and (max-width: $tablet-max-width){
             font-size: 16px;
@@ -374,6 +394,11 @@ async function calcuatedResult() {
             border: 1px solid $color-dark-blue;
             border-radius: 30px;
             font-weight: 700;
+            text-wrap: nowrap;
+
+            @media screen and (max-width: $desctop-small-max-width) {
+                flex: 1;
+            }
 
             @media (hover: hover) {
                 &:hover {
@@ -397,6 +422,7 @@ async function calcuatedResult() {
         display: flex;
         gap: 15px;
         flex-direction: column;
+        flex: 1;
     }
 }
 </style>

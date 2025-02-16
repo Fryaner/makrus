@@ -52,11 +52,21 @@ function toExample() {
         </div>
         <nav class="header__nav ">
             <ul class="header__list" :class="{active: store.isActive}">
-                <li class="header__link"><a @click="toHome()">Главная</a></li>
-                <li class="header__link"><a @click="toAbout()">О компании</a></li>
-                <li class="header__link"><a @click="toContacts()">Контакты</a></li>
-                <li class="header__link"><a @click="toExample()">Примеры работ</a></li>
-                <li class="header__link"><a @click="toDelivery()">Доставка и оплата</a></li>
+                <li class="header__link">
+                    <router-link @click="toHome()" to="/">Главная</router-link>
+                </li>
+                <li class="header__link">
+                    <router-link @click="toAbout()" to="/about">О компании</router-link>
+                </li>
+                <li class="header__link">
+                    <router-link @click="toContacts()" to="/contacts">Контакты</router-link>
+                </li>
+                <li class="header__link">
+                    <router-link @click="toExample()" to="/example">Примеры работ</router-link>
+                </li>
+                <li class="header__link">
+                    <router-link @click="toDelivery()" to="/delivery">Доставка и оплата</router-link>
+                </li>
             </ul>
         </nav>
         <div class="header__contacts" :class="{active: store.isActive}">
@@ -75,6 +85,25 @@ function toExample() {
 </template>
 
 <style lang="scss" scoped>
+
+.router-link-active {
+  font-weight: bold; /* Пример: сделать шрифт жирным */
+  color: $color-dark-blue;
+  position: relative;
+
+  &::after {
+        transition: .5s;
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: $color-dark-blue;
+        left: 0;
+        bottom: -5px;
+    }
+
+
+}
 .burger {
     display: none;
     width: 35px;
@@ -185,7 +214,7 @@ function toExample() {
         }
 
         a {
-            color: $color-black;
+            // color: $color-black;
         }
     }
     &__link {

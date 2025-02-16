@@ -8,13 +8,16 @@ export const useCounterStore = defineStore('counter', () => {
     let subTitle = ref('')
     const isOpen = ref(false);
     const isOverlay = ref(false);
+    const isSogals = ref(false)
 
     function changePopUp() {
         title.value = ''
         subTitle.value = ''
+        document.body.classList.toggle('open')
         isOverlay.value = !isOverlay.value
         isOpen.value = !isOpen.value
         isActive.value = false
+        isSogals.value = false
     }
 
     function changeTitile(text) {
@@ -33,5 +36,5 @@ export const useCounterStore = defineStore('counter', () => {
         isActive.value = !isActive.value
     }
   
-    return { isActive, isOpen,title,subTitle,type,isOverlay, openBurgerMenu, changePopUp, changeTitile, changeSubTitile, changeType }
+    return { isActive, isSogals, isOpen,title,subTitle,type,isOverlay, openBurgerMenu, changePopUp, changeTitile, changeSubTitile, changeType }
   })

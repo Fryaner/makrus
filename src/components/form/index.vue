@@ -23,12 +23,12 @@
                 <input v-show="false" v-model="store.subTitle" name="Тип Обороудования"/>
                 <div class="form__bottom">
                     <div class="form__btns">
-                        <button class="form__send" :disabled="!isSogals">Отправить</button>
+                        <button class="form__send" :disabled="!store.isSogals">Отправить</button>
                         <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
                     </div>
                     <div class="form__yes">
                         <label for="yes">Я соглашаюсь с <a href="">обработкой персональных данных</a></label>
-                        <input id="yes" type="checkbox" v-model="isSogals"/>
+                        <input id="yes" type="checkbox" v-model="store.isSogals"/>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,6 @@ import { ref } from 'vue';
 import { useCounterStore } from '@/store/index'
 const store = useCounterStore()
 const stage = ref(1)
-const isSogals = ref(false)
 function test(event) {
     event.preventDefault()
 }
@@ -72,7 +71,7 @@ function test(event) {
 .form {
     z-index: 2;
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);

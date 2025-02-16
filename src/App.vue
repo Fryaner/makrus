@@ -10,7 +10,6 @@ const store = useCounterStore()
 <template>
     <div class="wrapper" :class="[
       {active: store.isActive}, 
-      {open:store.isOpen},
       {overlay: store.isOverlay}
     ]">
       <Header/>  
@@ -48,9 +47,8 @@ const store = useCounterStore()
       z-index: 1;
     }
 }
-.wrapper.active, .wrapper.open {
+.wrapper.active {
   overflow: hidden;
-  height: 100vh;
 }
 .flex-1 {
   flex: 1;
