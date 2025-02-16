@@ -49,6 +49,7 @@ const store = useCounterStore()
 }
 .wrapper.active {
   overflow: hidden;
+  height: 100vh;
 }
 .flex-1 {
   flex: 1;
