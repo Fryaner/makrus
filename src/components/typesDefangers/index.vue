@@ -16,7 +16,7 @@ function openModal(text) {
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
-                    <img src="@/assets/images/image1.png" alt=""/>
+                    <img src="@/assets/images/image1.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Оксидайзер</h3>
@@ -26,25 +26,25 @@ function openModal(text) {
                         <div class="defangers__plus">
                             <h4 class="plus__title">Плюсы</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Компактность</li>
-                                <li class="plus__li"><img src="@/assets/icons/plus.png" alt=""/>Низкая стоимость</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Компактность</li>
+                                <li class="plus__li"><img src="@/assets/icons/plus.svg" alt=""/>Низкая стоимость</li>
                             </ul>
                         </div>
                         <div class="defangers__minus">
                             <h4 class="minus__title">Минусы</h4>
                             <ul class="minus__list">
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Не всегда хватает воздуха для проветривания сероводорода</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Не всегда хватает воздуха для проветривания сероводорода</li>
                             </ul>
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>27 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>27 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Оксидайзер')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
                 <div class="defangers-2__image">
-                    <img src="@/assets/images/image2.png" alt=""/>
+                    <img src="@/assets/images/image2.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Обезжилезование и умягчение 2 в 1</h3>
@@ -54,24 +54,24 @@ function openModal(text) {
                         <div class="defangers__plus">
                             <h4 class="plus__title">Плюсы</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Универсальность</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Универсальность</li>
                             </ul>
                         </div>
                         <div class="defangers__minus">
                             <h4 class="minus__title">Минусы</h4>
                             <ul class="minus__list">
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Малый срок службы засыпки 1-2 года.</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Малый срок службы засыпки 1-2 года.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Обезжилезование и умягчение 2 в 1')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers">
                 <div class="defangers__image">
-                    <img src="@/assets/images/image3.png" alt=""/>
+                    <img src="@/assets/images/image3.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Обезжилезование с аэрацией</h3>
@@ -81,19 +81,19 @@ function openModal(text) {
                         <div class="defangers__plus">
                             <h4 class="plus__title">Плюсы</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Высокая производительность</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Высокая производительность</li>
                             </ul>
                         </div>
                         <div class="defangers__minus">
                             <h4 class="minus__title">Минусы</h4>
                             <ul class="minus__list">
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Высокая стоимость</li>
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Высокий уровень шума от компрессора</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Высокая стоимость</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Высокий уровень шума от компрессора</li>
                             </ul>
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>62 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>62 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Обезжилезование с аэрацией')">Оформить заказ</button>
                     </div>
             </div>
@@ -135,7 +135,7 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg4.png');
+        background-image: url('@/assets/images/bg4.webp');
         background-repeat: no-repeat;
         background-position: center center;
         grid-area: Img;
@@ -189,7 +189,7 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg1.png');
+        background-image: url('@/assets/images/bg1.webp');
         background-repeat: no-repeat;
         background-position: center center;
         grid-area: Img;

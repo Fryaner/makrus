@@ -8,7 +8,7 @@
                     <p><img src="@/assets/icons/check.svg" alt=""/>Доставка и отправка в другие города и регионы возможна транспортными компаниями по предоплате.</p>
                 </div>
             </section>
-            <img class="delivery__image" src="@/assets/images/delivery.png" alt=""/>
+            <img class="delivery__image" src="@/assets/images/delivery.webp" alt=""/>
         </div>
         <div class="delivery__pay">
             <section class="delivery__info-2">
@@ -18,11 +18,11 @@
             <div class="delivery__selected">
                 <div class="delivery__cash">
                     <p>НАЛИЧНЫМ ПУТЁМ</p>
-                    <img src="@/assets/images/deliverySelect1.png" alt=""/>
+                    <img src="@/assets/images/deliverySelect1.webp" alt=""/>
                 </div>
                 <div class="delivery__cashless">
                     <p>БЕЗНАЛИЧНЫМ ПУТЁМ</p>
-                    <img src="@/assets/images/deliverySelect2.png" alt=""/>
+                    <img src="@/assets/images/deliverySelect2.webp" alt=""/>
                 </div>
             </div>
         </div>
@@ -163,11 +163,11 @@
         }
 
         &__cashless {
-            background-color: #16C75D;
+            background-color: #FFB842; 
         }
 
         &__cash {
-            background-color: #FFB842; 
+            background-color: #16C75D;
         }
     }
 </style>

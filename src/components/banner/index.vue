@@ -32,8 +32,7 @@ function openModal2() {
 <style lang="scss" scoped>
     .banners {
         position: relative;
-        background-image: url('@/assets/images/banner.png');
-        background-position: center;
+        background-image: url('@/assets/images/banner.webp');
         z-index: 0;
         background-size: cover;
         background-repeat: no-repeat;
@@ -59,16 +58,6 @@ function openModal2() {
         @media screen and (max-width: $mobile-max-width) {
             padding: 60px 10px;
         }
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(2px);
-            z-index:-1;
-            top: 0;
         }
 
         &__info {
@@ -107,7 +96,7 @@ function openModal2() {
             }
 
             @media screen and (max-width: $mobile-max-width) {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
 

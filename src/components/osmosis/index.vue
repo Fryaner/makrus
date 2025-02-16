@@ -7,7 +7,7 @@
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
-                    <img src="@/assets/images/image5.png" alt=""/>
+                    <img src="@/assets/images/image5.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Бытовой осмос</h3>
@@ -17,27 +17,27 @@
                         <div class="defangers__plus">
                             <h4 class="plus__title">Плюсы</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Универсальность</li>
-                                <li class="plus__li"><img src="@/assets/icons/plus.png" alt=""/>Низкая стоимость</li>
-                                <li class="plus__li"><img src="@/assets/icons/plus.png" alt=""/>Высокая степень очистки</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Универсальность</li>
+                                <li class="plus__li"><img src="@/assets/icons/plus.svg" alt=""/>Низкая стоимость</li>
+                                <li class="plus__li"><img src="@/assets/icons/plus.svg" alt=""/>Высокая степень очистки</li>
                             </ul>
                         </div>
                         <div class="defangers__minus">
                             <h4 class="minus__title">Минусы</h4>
                             <ul class="minus__list">
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Малая производительность 5-6 л/ч</li>
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Давление в системе не ниже 3атм</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Малая производительность 5-6 л/ч</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Давление в системе не ниже 3атм</li>
                             </ul>
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>12 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>12 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Бытовой осмос')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
                 <div class="defangers-2__image">
-                    <img src="@/assets/images/image6.png" alt=""/>
+                    <img src="@/assets/images/image6.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Промышленный осмос</h3>
@@ -47,16 +47,16 @@
                         <div class="defangers__plus">
                             <h4 class="plus__title">Плюсы</h4>
                             <ul class="plus__list">
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>100%-ое удаление органических примесей</li>
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Очистка воды без изменения её температурый</li>
-                                <li class="plus__li" ><img src="@/assets/icons/plus.png" alt=""/>Высокая производительность</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>100%-ое удаление органических примесей</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Очистка воды без изменения её температурый</li>
+                                <li class="plus__li" ><img src="@/assets/icons/plus.svg" alt=""/>Высокая производительность</li>
                             </ul>
                         </div>
                         <div class="defangers__minus">
                             <h4 class="minus__title">Минусы</h4>
                             <ul class="minus__list">
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Индивидуальный подбор по тех.заданию</li>
-                                <li class="minus__li"><img src="@/assets/icons/minus.png" alt=""/>Габаритные размеры</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Индивидуальный подбор по тех.заданию</li>
+                                <li class="minus__li"><img src="@/assets/icons/minus.svg" alt=""/>Габаритные размеры</li>
                             </ul>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg1.png');
+        background-image: url('@/assets/images/bg1.webp');
         background-repeat: no-repeat;
         background-position: center center;
         grid-area: Img;

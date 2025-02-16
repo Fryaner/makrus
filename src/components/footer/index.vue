@@ -1,8 +1,8 @@
 <template>
     <footer class="footer">
         <div class="footer__logo">
-            <img src="@/assets/images/logo.png" alt=""/>
-            <h3 class="footer__title">ООО МакРус</h3>
+            <img src="@/assets/images/logo.webp" alt=""/>
+            <h3 class="footer__title">ООО «МакРус»</h3>
         </div>
         <nav class="footer__nav">
             <h3 @click="test()">Навигация</h3>
@@ -26,8 +26,8 @@
         </nav>
         <div class="footer__contacts">
             <h3>Контактная информация</h3>
-            <a href="mailto:ooo.makrus@mail.ru" class="footer__mail"><img src="@/assets/icons/mail.png" alt=""/>ooo.makrus@mail.ru</a>
-            <a href="tel:+ 79778833882" class="footer__phone"><img src="@/assets/icons/phone.png" alt=""/>+ 7  977 883 38 82</a>
+            <a href="mailto:ooo.makrus@mail.ru" class="footer__mail"><img src="@/assets/icons/mail.svg" alt=""/>ooo.makrus@mail.ru</a>
+            <a href="tel:+ 79778833882" class="footer__phone"><img src="@/assets/icons/phone.svg" alt=""/>+ 7  977 883 38 82</a>
             <button @click="openModal()">Заказать расчёт</button>
         </div>
     </footer>

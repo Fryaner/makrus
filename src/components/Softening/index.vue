@@ -16,7 +16,7 @@ function openModal(text) {
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
-                    <img src="@/assets/images/image2.png" alt="d"/>
+                    <img src="@/assets/images/image2.webp" alt="d"/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Классический умягчитель</h3>
@@ -33,13 +33,13 @@ function openModal(text) {
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>36 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>36 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Классический умягчитель')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers-2">
                 <div class="defangers-2__image">
-                    <img src="@/assets/images/image4.png" alt=""/>
+                    <img src="@/assets/images/image4.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
                         <h3 class="defangers__title">Умягчитель кабинетного типа</h3>
@@ -55,7 +55,7 @@ function openModal(text) {
                         </div>
                     </div>
                     <div class="defangers__footer">
-                        <p class="defangers__pay"><img src="@/assets/icons/credit.png" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.png" alt=""/></span></p>
+                        <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
                         <button class="defangers__btn" @click="openModal('Умягчитель кабинетного типа')">Оформить заказ</button>
                     </div>
             </div>
@@ -96,7 +96,7 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg3.png');
+        background-image: url('@/assets/images/bg3.webp');
         background-repeat: no-repeat;
         background-position: center center;
         grid-area: Img;
@@ -151,7 +151,7 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg4.png');
+        background-image: url('@/assets/images/bg4.webp');
         background-repeat: no-repeat;
         background-position: center center;
         grid-area: Img;

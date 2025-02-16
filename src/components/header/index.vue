@@ -44,9 +44,9 @@ function toExample() {
 <template>
     <header class="header">
         <div class="header__logo">   
-            <img class="header__image" src="@/assets/images/logo.png" alt="logo"/>
+            <img class="header__image" src="@/assets/images/logo.webp" alt="logo"/>
             <div class="header__info">
-                <h1 class="header__title">ООО МакРус</h1>
+                <h1 class="header__title">ООО «МакРус»</h1>
                 <h2 class="header__sub-title">Лучшие в своём деле</h2>
             </div>
         </div>

@@ -4,45 +4,45 @@
         <div class="examples__lists">
             <div class="examples__list-1">
                 <div class="examples__example1">
-                    <img src="@/assets/images/example1.png" alt=""/>
+                    <img src="@/assets/images/example1.webp" alt=""/>
                     <!-- <div class="examples__info">
                         <p>Работа 1</p>
                         <p>Наведитесь, чтобы посмотреть</p>
-                        <img src="@/assets/icons/mousePointer.png" alt=""/>
+                        <img src="@/assets/icons/mousePointer.webp" alt=""/>
                     </div> -->
                 </div>
                 <div class="examples__example2">
-                    <img src="@/assets/images/example2.png" alt=""/>
+                    <img src="@/assets/images/example2.webp" alt=""/>
                     <!-- <div>
                         <p>Работа 2</p>
                         <p>Наведитесь, чтобы посмотреть</p>
-                        <img src="@/assets/icons/mousePointer.png" alt=""/>
+                        <img src="@/assets/icons/mousePointer.webp" alt=""/>
                     </div> -->
                 </div>
                 <div class="examples__example3">
-                    <img src="@/assets/images/example3.png" alt=""/>
+                    <img src="@/assets/images/example3.webp" alt=""/>
                     <!-- <div>
                         <p>Работа 3</p>
                         <p>Наведитесь, чтобы посмотреть</p>
-                        <img src="@/assets/icons/mousePointer.png" alt=""/>
+                        <img src="@/assets/icons/mousePointer.webp" alt=""/>
                     </div> -->
                 </div>
             </div>
             <div class="examples__list-2">
                 <div class="examples__example4">
-                    <img src="@/assets/images/example4.png" alt=""/>
+                    <img src="@/assets/images/example4.webp" alt=""/>
                     <!-- <div>
                         <p>Работа 4</p>
                         <p>Наведитесь, чтобы посмотреть</p>
-                        <img src="@/assets/icons/mousePointer.png" alt=""/>
+                        <img src="@/assets/icons/mousePointer.webp" alt=""/>
                     </div> -->
                 </div>
                 <div class="examples__example5">
-                    <img src="@/assets/images/example5.png" alt=""/>
+                    <img src="@/assets/images/example5.webp" alt=""/>
                     <!-- <div>
                         <p>Работа 5</p>
                         <p>Наведитесь, чтобы посмотреть</p>
-                        <img src="@/assets/icons/mousePointer.png" alt=""/>
+                        <img src="@/assets/icons/mousePointer.webp" alt=""/>
                     </div> -->
                 </div>
             </div>

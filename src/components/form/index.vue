@@ -22,13 +22,13 @@
                     <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="name">Номер телефонв</label>
+                    <label for="name">Номер телефона</label>
                     <input id="name" type="text" name="Номер телефона"/>
                 </div>
-                <div class="form__input">
+                <!-- <div class="form__input">
                     <label for="name">Email</label>
                     <input id="name" type="text" name="Email"/>
-                </div>
+                </div> -->
                 <input v-show="false" v-model="store.title" name="Тип Заявки"/>
                 <div v-if="store.subTitle">
                     <input v-show="false" v-model="store.subTitle" name="Тип Обороудования"/>
@@ -37,7 +37,6 @@
                     <div class="form__btns">
                         <div class="form__btns-main">
                             <button type="submit" class="form__send" :disabled="!store.isSogals">Отправить</button>
-                            <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
                         </div>
                     </div>
                     <div class="form__yes">
@@ -147,18 +146,17 @@
                             <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
                         </div>
                         <div class="form__input">
-                            <label for="name">Номер телефонв</label>
+                            <label for="name">Номер телефона</label>
                             <input id="name" type="text" name="Номер телефона"/>
                         </div>
-                        <div class="form__input">
+                        <!-- <div class="form__input">
                             <label for="name">Email</label>
                             <input id="name" type="text" name="Email" />
-                        </div>
+                        </div> -->
                         <div class="form__bottom">
                             <div class="form__btns">
                                 <div class="form__btns-main">
                                     <button class="form__send" :disabled="!store.isSogals">Отправить</button>
-                                    <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
                                 </div>
                             </div>
                             <div class="form__yes">
@@ -176,7 +174,7 @@
                     <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="name">Номер телефонв</label>
+                    <label for="name">Номер телефона</label>
                     <input id="name" type="text" name="Номер телефона"/>
                 </div>
                 <div class="form__input">
@@ -192,7 +190,6 @@
                     <div class="form__btns">
                         <div class="form__btns-main">
                             <button type="submit" class="form__send" :disabled="!store.isSogals">Отправить</button>
-                            <button class="form__close-2" type="button" @click="store.changePopUp">Отменить</button>
                         </div>
                     </div>
                     <div class="form__yes">

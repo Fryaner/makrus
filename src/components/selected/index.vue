@@ -2,7 +2,7 @@
     <section>
         <Title>
             <template #title>КАКИЕ СИСТЕМЫ ПОДОЙДУТ ВАМ?</template>
-            <template #sub-title>Чтобы выбрать подходящий для вас размер колонны необходимо заполнить форму ниже</template>
+            <template #sub-title>Чтобы выбрать подходящий для продукт необходимо заполнить форму ниже</template>
         </Title>
         <div class="calculation">
             <div class="calculation__values">
@@ -264,7 +264,7 @@ async function calcuatedResult() {
         grid-area: Iron;
 
         select {
-            background-image: url('@/assets/icons/iron.png');
+            background-image: url('@/assets/icons/iron.svg');
         }
     }
 
@@ -272,7 +272,7 @@ async function calcuatedResult() {
         grid-area: Smell;
 
         select {
-            background-image: url('@/assets/icons/smell.png');
+            background-image: url('@/assets/icons/smell.svg');
         }
     }
 
@@ -280,7 +280,7 @@ async function calcuatedResult() {
         grid-area: Crum;
 
         select {
-            background-image: url('@/assets/icons/scum.png');
+            background-image: url('@/assets/icons/scum.svg');
         }
     }
 
@@ -288,7 +288,7 @@ async function calcuatedResult() {
         grid-area: Water;
 
         select {
-            background-image: url('@/assets/icons/water.png');
+            background-image: url('@/assets/icons/water.svg');
         }
     }
 
@@ -296,7 +296,7 @@ async function calcuatedResult() {
         grid-area: Col;
 
         select {
-            background-image: url('@/assets/icons/color.png');
+            background-image: url('@/assets/icons/color.svg');
         }
     }
 

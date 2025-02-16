@@ -8,7 +8,7 @@
                     <p>Одна из главных целей нашей компании иметь долгосрочные дружеские и деловые отношения с нашими клиентами и партнерами.</p>
                 </div>
         </section>
-        <img class="about__image" src="@/assets/images/about.png" alt=""/>
+        <img class="about__image" src="@/assets/images/about.webp" alt=""/>
     </div>
 </template>
 
