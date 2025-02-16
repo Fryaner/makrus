@@ -167,27 +167,27 @@ function toExample() {
         z-index: -2;
     }
     &__title {
-        font-size: 18px;
+        font-size: 20px;
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 16px;
+        }
+    }
+    &__sub-title {
+        font-size: 16px;
+        color: $color-light-blue;
 
         @media screen and (max-width: $tablet-max-width){
             font-size: 14px;
         }
-    }
-    &__sub-title {
-        font-size: 14px;
-        color: $color-light-blue;
-
-        @media screen and (max-width: $tablet-max-width){
-            font-size: 10px;
-        }
         @media screen and (max-width: $mobile-max-width){
-            font-size: 12px;
+            font-size: 14px;
         }
     }
     &__list {
         display: flex;
         gap: 23px;
-        font-size: 14px;
+        font-size: 16px;
         transition: .5s;
 
         &.active {
@@ -195,7 +195,7 @@ function toExample() {
         }
 
         @media screen and (max-width: $desctop-small-max-width){
-            font-size: 12px;
+            font-size: 14px;
             gap: 20px;
         }
 
@@ -329,12 +329,12 @@ function toExample() {
     }
     &__mail {
         color: $color-light-blue;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 15px;
         text-align: right;
 
         @media screen and (max-width: $tablet-max-width){
-            font-size: 12px;
+            font-size: 14px;
         }
         @media screen and (max-width: $mobile-max-width){
             font-size: 14px;
