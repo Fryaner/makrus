@@ -70,10 +70,6 @@ function toExample() {
             </ul>
         </nav>
         <div class="header__contacts" :class="{active: store.isActive}">
-            <!-- <div class="header__phone-mail">
-                <a class="header__mail" href="mailto:ooo.makrus@mail.ru">ooo.makrus@mail.ru</a>
-                <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
-            </div> -->
             <div class="header__right">
                 <button @click="openModal()" class="header__btn">Заказать звонок специалиста</button>
                 <div class="header__test">
@@ -82,8 +78,8 @@ function toExample() {
                     <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
                 </div>
                 <div class="header__social">
-                    <a class="header__wa" href="tel:"><img src="@/assets/icons/wa.svg" alt=""/></a>
-                    <a class="header__tg" href=""><img src="@/assets/icons/tg.svg" alt=""/></a>
+                    <a class="header__wa" href="https://wa.me/+79778833882"><img src="@/assets/icons/wa.svg" alt=""/></a>
+                    <a class="header__tg" href="https://t.me/+79778833882"><img src="@/assets/icons/tg.svg" alt=""/></a>
                 </div>
                 </div>
             </div>
