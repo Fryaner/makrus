@@ -2,45 +2,41 @@
     <section>
         <Title>
             <template #title>КАКИЕ СИСТЕМЫ ПОДОЙДУТ ВАМ?</template>
-            <template #sub-title>Чтобы выбрать подходящий для продукт необходимо заполнить форму ниже</template>
+            <template #sub-title>Калькулятор примерной системы для Васе</template>
         </Title>
         <div class="calculation">
             <div class="calculation__values">
                 <div class="calculation__iron">
-                    <label>Железо v</label>
-                    <select v-model="state.iron" :class="{ error: v$.iron.$errors.length }">
+                    <label>Железо</label>
+                    <select v-model="state.iron">
                         <option value="" selected disabled hidden>Нажмите, чтобы выбрать</option>
                         <option value="Да">Да</option>
                         <option value="Нет">Нет</option>
                     </select>
-                    <p v-if="v$.iron.$errors.length" :class="{ errorText: v$.iron.$errors.length }">Выберите хотя бы один вариант ответа</p>
                 </div>
                 <div class="calculation__scum">
-                    <label>Накипь v</label>
-                    <select v-model="state.scum" :class="{ error: v$.scum.$errors.length }">
+                    <label>Накипь</label>
+                    <select v-model="state.scum">
                         <option value="" selected disabled hidden>Нажмите, чтобы выбрать</option>
                         <option value="Да">Да</option>
                         <option value="Нет">Нет</option>
                     </select>
-                    <p v-if="v$.scum.$errors.length" :class="{ errorText: v$.scum.$errors.length }">Выберите хотя бы один вариант ответа</p>
                 </div>
                 <div class="calculation__smell">
-                    <label>Запах v</label>
-                    <select v-model="state.smell" :class="{ error: v$.smell.$errors.length }">
+                    <label>Запах</label>
+                    <select v-model="state.smell">
                         <option value="" selected disabled hidden>Нажмите, чтобы выбрать</option>
                         <option value="Да">Да</option>
                         <option value="Нет">Нет</option>
                     </select>
-                    <p v-if="v$.smell.$errors.length" :class="{ errorText: v$.smell.$errors.length }">Выберите хотя бы один вариант ответа</p>
                 </div>
                 <div class="calculation__color">
-                    <label>Цвет v</label>
-                    <select v-model="state.color" :class="{ error: v$.color.$errors.length }">
+                    <label>Цвет</label>
+                    <select v-model="state.color">
                         <option value="" selected disabled hidden>Нажмите, чтобы выбрать</option>
                         <option value="Да">Да</option>
                         <option value="Нет">Нет</option>
                     </select>
-                    <p v-if="v$.color.$errors.length" :class="{ errorText: v$.color.$errors.length }">Выберите хотя бы один вариант ответа</p>
                 </div>
                 <div class="calculation__water">
                     <label>Источник воды</label>
@@ -102,11 +98,7 @@ const result = ref([])
 
 const rules = computed(() => {
     return {
-        iron: { required }, 
-        smell: { required }, 
         water: { required }, 
-        scum: { required }, 
-        color: { required }, 
     }
 })
 
@@ -119,55 +111,65 @@ async function calcuatedResult() {
         return
     }
     if (state.water === 'Скважина') {
-    if (state.iron === 'Да') {
-        result.value = []
-        result.value.push('Обезжилезиватель и фильтр грубой очистки')
-    }
-    if (state.scum === 'Да') 
-    {
-        result.value = []
-        result.value.push('Обезжилезиватель или умягчитель 2в1')
-    }
-    if (state.color === 'Да') {
-        result.value = []
-        result.value.push('Угольный фильтр') 
-    }
-    if (state.smell === 'Да') {
-        result.value = []
-        result.value.push('Аэрация и угольный фильтр')
-    }
-    if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
-        result.value = []
-        result.value.push('Обезжилезиватель и фильтр грубой очистки')
-        result.value.push('Обезжилезиватель или умягчитель 2в1')
-        result.value.push('Угольный фильтр')
-        result.value.push('Аэрация и угольный фильтр')
-    }
+        if (state.iron === 'Да') {
+            result.value = []
+            result.value.push('Обезжилезиватель и фильтр грубой очистки')
+        }
+        if (state.scum === 'Да') 
+        {
+            result.value = []
+            result.value.push('Умягчитель')
+        }
+        if (state.color === 'Да') {
+            result.value = []
+            result.value.push('Угольный фильтр') 
+        }
+        if (state.smell === 'Да') {
+            result.value = []
+            result.value.push('Аэрация и угольный фильтр')
+        }
+        if (state.iron === 'Да' & state.scum === 'Да') {
+            result.value = []
+            result.value.push('Умягчитель и обезжилезиватель')
+            result.value.push('Обезжилезиватель или умягчитель 2в1')
+        }
+        if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value = []
+            result.value.push('Обезжилезиватель и фильтр грубой очистки')
+            result.value.push('Обезжилезиватель или умягчитель 2в1')
+            result.value.push('Угольный фильтр')
+            result.value.push('Аэрация и угольный фильтр')
+        }
   } else {
     if (state.iron === 'Да') {
-        result.value = []
-        result.value.push('Механический фильтр, обезжилезиватель и фильтр грубой очистки')
-    }
-    if (state.scum === 'Да') 
-    {
-        result.value = []
-        result.value.push('Механический фильтр, обезжилезиватель или умягчитель 2в1')
-    }
-    if (state.color === 'Да') {
-        result.value = []
-        result.value.push('Механический фильтр, угольный фильтр') 
-    }
-    if (state.smell === 'Да') {
-        result.value = []
-        result.value.push('Механический фильтр, аэрация и угольный фильтр')
-    }
-    if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
-        result.value = []
-        result.value.push('Обезжилезиватель и фильтр грубой очистки')
-        result.value.push('Обезжилезиватель или умягчитель 2в1')
-        result.value.push('Угольный фильтр')
-        result.value.push('Аэрация и угольный фильтр')
-    }
+            result.value = []
+            result.value.push('Механический фильтр, обезжилезиватель и фильтр грубой очистки')
+        }
+        if (state.scum === 'Да') 
+        {
+            result.value = []
+            result.value.push('Механический фильтр, умягчитель')
+        }
+        if (state.color === 'Да') {
+            result.value = []
+            result.value.push('Механический фильтр, угольный фильтр') 
+        }
+        if (state.smell === 'Да') {
+            result.value = []
+            result.value.push('Механический фильтр, аэрация и угольный фильтр')
+        }
+        if (state.iron === 'Да' & state.scum === 'Да') {
+            result.value = []
+            result.value.push('Механический фильтр, умягчитель и обезжилезиватель')
+            result.value.push('Механический фильтр, обезжилезиватель или умягчитель 2в1')
+        }
+        if(state.iron === 'Да' && state.scum === 'Да' && state.color === 'Да' && state.smell === 'Да') {
+            result.value = []
+            result.value.push('Механический фильтр, обезжилезиватель и фильтр грубой очистки')
+            result.value.push('Механический фильтр, обезжилезиватель или умягчитель 2в1')
+            result.value.push('Механический фильтр, угольный фильтр')
+            result.value.push('Механический фильтр, аэрация и угольный фильтр')
+        }
   }
 }
 </script>
