@@ -2,7 +2,7 @@
     <section>
         <Title>
             <template #title>КАКИЕ СИСТЕМЫ ПОДОЙДУТ ВАМ?</template>
-            <template #sub-title>Калькулятор примерной системы для Васе</template>
+            <template #sub-title>Калькулятор примерной системы для вас</template>
         </Title>
         <div class="calculation">
             <div class="calculation__values">
