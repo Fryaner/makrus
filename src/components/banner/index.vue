@@ -25,6 +25,7 @@ function openModal2() {
     store.changePopUp()
     store.changeTitile('Заказать расчёт')
     store.changeType(2)
+    store.changeStage()
 }
 </script>
 
