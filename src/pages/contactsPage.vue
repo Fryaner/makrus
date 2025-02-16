@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="contacts__form">
-                <p class="contacts__invite">Мы очень рады вашим вопросам и предложениям!</p>
+                <p class="contacts__invite">Мы очень рады помочь Вам</p>
                 <button @click="openModal()" class="contacts__btn">Напишите нам</button>
             </div>
         </div>

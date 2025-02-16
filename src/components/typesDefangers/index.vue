@@ -66,7 +66,7 @@ function openModal(text) {
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>39 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
-                        <button class="defangers__btn" @click="openModal('Обезжилезование и умягчение 2 в 1')">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Обезжилезивание и умягчение 2 в 1')">Оформить заказ</button>
                     </div>
             </div>
             <div class="defangers">
@@ -74,7 +74,7 @@ function openModal(text) {
                     <img src="@/assets/images/image3.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
-                        <h3 class="defangers__title">Обезжилезование с аэрацией</h3>
+                        <h3 class="defangers__title">Обезжилезивание с аэрацией</h3>
                         <p class="defangers__description">Аэрация — это система подачи большого количества воздуха компрессором в воду для активного удаления сероводорода и окисления железа. </p>           
                     </div>
                     <div class="defangers__other">
@@ -94,7 +94,7 @@ function openModal(text) {
                     </div>
                     <div class="defangers__footer">
                         <p class="defangers__pay"><img src="@/assets/icons/credit.svg" alt=""/>Стоимость от <span>62 000<img src="@/assets/icons/R.svg" alt=""/></span></p>
-                        <button class="defangers__btn" @click="openModal('Обезжилезование с аэрацией')">Оформить заказ</button>
+                        <button class="defangers__btn" @click="openModal('Обезжилезивание с аэрацией')">Оформить заказ</button>
                     </div>
             </div>
         </div>

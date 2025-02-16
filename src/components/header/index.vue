@@ -56,7 +56,7 @@ function toExample() {
                     <router-link @click="toHome()" to="/">Главная</router-link>
                 </li>
                 <li class="header__link">
-                    <router-link @click="toAbout()" to="/about">О компании</router-link>
+                    <router-link @click="toAbout()" to="/about">О нас</router-link>
                 </li>
                 <li class="header__link">
                     <router-link @click="toContacts()" to="/contacts">Контакты</router-link>
@@ -70,11 +70,23 @@ function toExample() {
             </ul>
         </nav>
         <div class="header__contacts" :class="{active: store.isActive}">
-            <div class="header__phone-mail">
+            <!-- <div class="header__phone-mail">
                 <a class="header__mail" href="mailto:ooo.makrus@mail.ru">ooo.makrus@mail.ru</a>
                 <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
+            </div> -->
+            <div class="header__right">
+                <button @click="openModal()" class="header__btn">Заказать звонок специалиста</button>
+                <div class="header__test">
+                    <div class="header__phone-mail">
+                    <a class="header__mail" href="mailto:ooo.makrus@mail.ru">ooo.makrus@mail.ru</a>
+                    <a class="header__phone" href="tel:+79778833882">+ 7  977 883 38 82</a>
+                </div>
+                <div class="header__social">
+                    <a class="header__wa" href="tel:"><img src="@/assets/icons/wa.svg" alt=""/></a>
+                    <a class="header__tg" href=""><img src="@/assets/icons/tg.svg" alt=""/></a>
+                </div>
+                </div>
             </div>
-            <button @click="openModal()" class="header__btn">Заказать звонок специалиста</button>
         </div>
         <div class="burger" @click="store.openBurgerMenu">
             <p class="burger__top" :class="{active: store.isActive}"></p>
@@ -159,6 +171,51 @@ function toExample() {
     align-items: center;
     padding: 30px 10px;
 
+    &__test {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media screen and (max-width: $mobile-max-width){
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        align-items: flex-end;
+
+        @media screen and (max-width: $tablet-max-width){
+            gap: 5px;
+        }
+
+    }
+
+    &__social {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__wa {
+        width: 36px;
+        height: 36px;
+    }
+
+    &__tg {
+        width: 32px;
+        height: 32px;
+
+    }
+
     &__logo {
         display: flex;
         gap: 10px;
@@ -167,21 +224,21 @@ function toExample() {
         z-index: -2;
     }
     &__title {
-        font-size: 20px;
+        font-size: 18px;
 
         @media screen and (max-width: $tablet-max-width){
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     &__sub-title {
-        font-size: 16px;
+        font-size: 14px;
         color: $color-light-blue;
 
         @media screen and (max-width: $tablet-max-width){
-            font-size: 14px;
+            font-size: 10px;
         }
         @media screen and (max-width: $mobile-max-width){
-            font-size: 14px;
+            font-size: 12px;
         }
     }
     &__list {
@@ -195,8 +252,13 @@ function toExample() {
         }
 
         @media screen and (max-width: $desctop-small-max-width){
-            font-size: 14px;
+            font-size: 12px;
             gap: 20px;
+        }
+
+        @media screen and (max-width: $tablet-max-width){
+            font-size: 14px;
+            gap: 10px;
         }
 
         @media screen and (max-width: $mobile-max-width){
@@ -285,12 +347,6 @@ function toExample() {
         flex-direction: column;
         justify-content: center;
 
-        @media screen and (max-width: $tablet-max-width){
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         @media screen and (max-width: $mobile-max-width){
             flex-direction: column;
             gap: 5px;
@@ -329,12 +385,12 @@ function toExample() {
     }
     &__mail {
         color: $color-light-blue;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 15px;
         text-align: right;
 
         @media screen and (max-width: $tablet-max-width){
-            font-size: 14px;
+            font-size: 12px;
         }
         @media screen and (max-width: $mobile-max-width){
             font-size: 14px;
