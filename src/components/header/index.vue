@@ -326,7 +326,7 @@ function toExample() {
 
         @media screen and (max-width: $mobile-max-width){
             &.active {
-            transform: translateX(0) translateY(-150%);
+            transform: translateX(0) translateY(-110%);
         }
             justify-content: space-between;
             transform: translateX(100%) translateY(-150%);
