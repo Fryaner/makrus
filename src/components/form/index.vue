@@ -1,5 +1,5 @@
 <template>
-    <section class="form" v-show="store.isOpen">
+    <section class="form"  :class="[{active: !isActive}, {noactive: isActive}]" v-show="store.isOpen">
         <button class="form__close" @click="store.changePopUp"><img src="@/assets/icons/close.svg" alt=""/></button>
         <div>
             <div class="form__title-block">
@@ -199,6 +199,9 @@
             </div>
         </form>
     </section>
+    <div class="form" :class="[{active: isActive}, {noactive: !isActive}]">
+                <p>Идёт отправка формы Пожалуйста подождите!</p>
+    </div>
 </template>
 
 <script setup>
@@ -216,6 +219,8 @@ const rules = {
     name: { required }, 
 }
 
+const isActive = ref(false)
+
 const v$ = useVuelidate(rules, state)
 
 
@@ -227,6 +232,7 @@ async function send(event) {
     }
     store.changePopUp()
     store.isSogals = false
+    isActive.value = true
 }
 const selectedOne = ref('')
 const selectedOneOther = ref('')
@@ -257,6 +263,14 @@ const selectedThreeOther = ref('')
     gap: 20px;
     max-width: 500px;
     width: calc(100% - 40px); 
+
+    &.noactive {
+        display: none;
+    }
+
+    &.active {
+        display: block;
+    }
 
     .error {
     border: 1px solid rgb(246, 65, 65);
