@@ -94,9 +94,6 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg3.webp');
-        background-repeat: no-repeat;
-        background-position: center center;
         grid-area: Img;
         display: flex;
         justify-content: center;
@@ -109,7 +106,7 @@ function openModal(text) {
         }
 
         img {
-            max-width: 200px;
+            max-width: 400px;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -121,7 +118,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 100px;
+                max-width: 300px;
             }
         }
     }

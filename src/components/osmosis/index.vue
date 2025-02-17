@@ -166,9 +166,6 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: url('@/assets/images/bg1.webp');
-        background-repeat: no-repeat;
-        background-position: center center;
         grid-area: Img;
         display: flex;
         justify-content: center;

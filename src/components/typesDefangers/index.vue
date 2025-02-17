@@ -69,8 +69,8 @@ function openModal(text) {
                         <button class="defangers__btn" @click="openModal('Обезжилезивание и умягчение 2 в 1')">Оформить заказ</button>
                     </div>
             </div>
-            <div class="defangers">
-                <div class="defangers__image">
+            <div class="defangers-3">
+                <div class="defangers-3__image">
                     <img src="@/assets/images/image3.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
@@ -162,6 +162,61 @@ function openModal(text) {
                 "Footer";
                 grid-template-columns: 1fr;
                 max-width: 200px;
+            }
+        }
+    }
+}
+.defangers-3 {
+    display: grid;
+
+    grid-template-areas: 
+            "Img Main" 
+            "Img Other"
+            "Img Other"
+            "Img Footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+
+    @media screen and (max-width: $mobile-max-width) {
+            grid-template-areas: 
+            "Main"
+            "Img"
+            "Other"
+            "Footer";
+            grid-template-columns: 1fr;
+
+            gap: 30px;
+    }
+
+    &__image {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: Img;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: 65%;
+
+        @media screen and (max-width: $mobile-max-width) {
+            background-size: contain;
+        }
+
+        img {
+            max-width: 400px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @media screen and (max-width: $mobile-max-width) {
+                grid-template-areas: 
+                "Main"
+                "Img"
+                "Other"
+                "Footer";
+                grid-template-columns: 1fr;
+                max-width: 300px;
             }
         }
     }
