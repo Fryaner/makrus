@@ -22,8 +22,9 @@
                     <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="name">Номер телефона</label>
-                    <input id="name" type="text" name="Номер телефона"/>
+                    <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <!-- <div class="form__input">
                     <label for="name">Email</label>
@@ -140,14 +141,15 @@
                 <div v-show="store.stage === 4">
                     <div class="form__main">
                         <div class="form__input">
-                            <label :class="{ errorText: v$.name.$errors.length }" for="name">Имя</label>
-                            <input id="name" :class="{ error: v$.name.$errors.length }" type="text" name="Имя" v-model="state.name"/>
-                            <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
-                        </div>
-                        <div class="form__input">
-                            <label for="name">Номер телефона</label>
-                            <input id="name" type="text" name="Номер телефона"/>
-                        </div>
+                    <label :class="{ errorText: v$.name.$errors.length }" for="name">Имя</label>
+                    <input id="name" :class="{ error: v$.name.$errors.length }" type="text" name="Имя" v-model="state.name"/>
+                    <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
+                </div>
+                <div class="form__input">
+                    <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
+                </div>
                         <!-- <div class="form__input">
                             <label for="name">Email</label>
                             <input id="name" type="text" name="Email" />
@@ -173,13 +175,14 @@
                     <p :class="{ errorText: v$.name.$errors.length }" v-if="v$.name.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="name">Номер телефона</label>
-                    <input id="name" type="text" name="Номер телефона"/>
+                    <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
                 </div>
-                <div class="form__input">
+                <!-- <div class="form__input">
                     <label for="name">Email</label>
                     <input id="name" type="text" name="Email"/>
-                </div>
+                </div> -->
                 <div class="form__input">
                     <label for="name">Предложение</label>
                     <input id="name" type="text" name="Пожелание"/>
@@ -211,9 +214,11 @@ import { required } from '@vuelidate/validators'
 const myForm = ref(null);
 const state = ref({
       name: '',
+      number: ''
     })
 const rules = {
     name: { required }, 
+    number: { required }, 
 }
 
 const v$ = useVuelidate(rules, state)
