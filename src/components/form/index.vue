@@ -225,6 +225,8 @@ async function send(event) {
         event.preventDefault()
         return
     }
+    store.changePopUp()
+    store.isSogals = false
 }
 const selectedOne = ref('')
 const selectedOneOther = ref('')
