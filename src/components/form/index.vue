@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="form__yes">
-                                <label for="yes">Я соглашаюсь с <a target="_blank" href="/public/assets/file.pdf">обработкой персональных данных</a></label>
+                                <label for="yes">Я соглашаюсь с <a target="_blank" href="/assets/file.pdf">обработкой персональных данных</a></label>
                                 <input id="yes" type="checkbox" v-model="store.isSogals"/>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <div class="form__yes">
-                        <label for="yes">Я соглашаюсь с <a target="_blank" href="/public/assets/file.pdf">обработкой персональных данных</a></label>
+                        <label for="yes">Я соглашаюсь с <a target="_blank" href="/assets/file.pdf">обработкой персональных данных</a></label>
                         <input id="yes" type="checkbox" v-model="store.isSogals"/>
                     </div>
                 </div>
