@@ -23,7 +23,7 @@
                     <router-link @click="toDelivery()" to="/delivery">Доставка и оплата</router-link>
                 </li>
                 <li>
-                    <router-link @click="toLists()" to="/delivery">Инструкции</router-link>
+                    <router-link @click="toLists()" to="/lists">Инструкции</router-link>
                 </li>
             </ul>
         </nav>
