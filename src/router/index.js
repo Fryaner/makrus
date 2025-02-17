@@ -5,6 +5,7 @@ const AboutPage = () => import('@/pages/aboutPage.vue');
 const ContactsPage = () => import('@/pages/contactsPage.vue');
 const DeliveryPage = () => import('@/pages/deliveryPage.vue');
 const ExamplePage = () => import('@/pages/examplesPage.vue');
+const ListPages = () => import('@/pages/listPages.vue');
 
 const routes = [
   {path: '/', component: MainPage},
@@ -12,6 +13,7 @@ const routes = [
   {path: '/contacts', component: ContactsPage},
   {path: '/delivery', component: DeliveryPage},
   {path: '/example', component: ExamplePage},
+  {path: '/lists', component: ListPages},
 ]
 
 const router = createRouter({

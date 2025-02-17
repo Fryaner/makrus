@@ -22,6 +22,9 @@
                 <li>
                     <router-link @click="toDelivery()" to="/delivery">Доставка и оплата</router-link>
                 </li>
+                <li>
+                    <router-link @click="toLists()" to="/delivery">Инструкции</router-link>
+                </li>
             </ul>
         </nav>
         <div class="footer__contacts">
@@ -78,6 +81,13 @@ function toExample() {
     store.isActive = false
     router.push({
     path: '/example'
+  })
+}
+function toLists() {
+    window.scroll(0,0)
+    store.isActive = false
+    router.push({
+    path: '/lists'
   })
 }
 </script>
