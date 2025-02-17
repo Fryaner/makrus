@@ -40,7 +40,7 @@
         a {
             transition: .5s;
             text-decoration: uppercase;
-            display: flex;
+            display: inline-flex;
             gap: 5px;
             align-items:center;
 
