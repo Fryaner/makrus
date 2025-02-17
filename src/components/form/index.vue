@@ -7,7 +7,7 @@
                 <h2 class="form__title">{{ store.title }}</h2>
             </div>
             <div>
-                <h3>{{ store.subTitle }}</h3>  
+                <!-- <h3>{{ store.subTitle }}</h3>   -->
                 <h3 v-if="store.stage === 1">Где требуется установка очистки воды?</h3>
                 <h3 v-if="store.stage === 2">Источник водоснабжения?</h3>
                 <h3 v-if="store.stage === 3">Проблемы с водой?</h3> 
