@@ -150,12 +150,14 @@ async function calcuatedresult1() {
             result1.value.push('Обезжелезиватель');
             result1.value.push('Фильтр грубой очистки');
             result1.value.push('Умягчитель классический');
-            result1.value.push('Аэрация и угольный фильтр');
+            result1.value.push('Аэрация');
+            result1.value.push('Угольный фильтр');
 
             result2.value.push('Обезжелезиватель');
             result2.value.push('Фильтр грубой очистки');
             result2.value.push('Умягчитель 2в1');
-            result2.value.push('Аэрация и угольный фильтр');
+            result2.value.push('Аэрация');
+            result2.value.push('Угольный фильтр');
         } else if (state.iron === 'Да' && state.color === 'Да' && state.smell === 'Да') {
             result1.value.push('Обезжелезиватель');
             result1.value.push('Фильтр грубой очистки');
@@ -247,13 +249,15 @@ async function calcuatedresult1() {
             result1.value.push('Обезжелезиватель');
             result1.value.push('Фильтр грубой очистки');
             result1.value.push('Умягчитель классический');
-            result1.value.push('Аэрация и угольный фильтр');
+            result1.value.push('Аэрация');
+            result1.value.push('Угольный фильтр');
 
             result2.value.push('Механический фильтр');
             result2.value.push('Обезжелезиватель');
             result2.value.push('Фильтр грубой очистки');
             result2.value.push('Умягчитель 2в1');
-            result2.value.push('Аэрация и угольный фильтр');
+            result2.value.push('Аэрация');
+            result2.value.push('Угольный фильтр');
         } else if (state.iron === 'Да' && state.color === 'Да' && state.smell === 'Да') {
             result1.value.push('Механический фильтр');
             result1.value.push('Обезжелезиватель');
