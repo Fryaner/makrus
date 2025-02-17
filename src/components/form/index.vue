@@ -242,6 +242,11 @@ const selectedTwoOther = ref('')
 
 const selectedThree = ref([])
 const selectedThreeOther = ref('')
+
+
+onMounted(() => {
+    isActive.value = false
+})
 </script>
 
 <style lang="scss" scoped>
