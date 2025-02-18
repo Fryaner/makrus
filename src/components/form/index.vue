@@ -248,16 +248,12 @@ const selectedThreeOther = ref('')
 
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
-    // Страница восстановлена из кэша (например, при нажатии кнопки "Назад").
-    // Здесь нужно очистить форму.
-    // Например, можно сбросить значения полей формы:
-    // document.getElementById("myForm").reset();
-    console.log('fd')
-    window.location.reload()
-    // Или можно сбросить реактивные переменные (v$ в вашем случае):
-    // v$.value.name = ''; // Пример: сброс поля "name"
-    // v$.value.email = ''; // Пример: сброс поля "email"
-    // v$.value.$reset(); // Если у вас есть метод $reset() в v$.value, используйте его.
+    state.value.name = ''
+    state.value.number = ''
+    store.isOverlay = false
+    store.isSogals = false
+    store.isOpen = false
+    // window.location.reload()
   }
 });
 </script>
