@@ -230,22 +230,13 @@ function formatPhoneNumber() {
       }
     }
 
-    function reload() {
-    console.log('f')
-    window.location.reload()
-}
-
-
 async function send(event) {
     const result = await v$.value.$validate()
     if (!result) {
         event.preventDefault()
         return
-    } else {
-        reload();
-    }
+    } 
 }
-
 const selectedOne = ref('')
 const selectedOneOther = ref('')
 
@@ -254,6 +245,21 @@ const selectedTwoOther = ref('')
 
 const selectedThree = ref([])
 const selectedThreeOther = ref('')
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    // Страница восстановлена из кэша (например, при нажатии кнопки "Назад").
+    // Здесь нужно очистить форму.
+    // Например, можно сбросить значения полей формы:
+    // document.getElementById("myForm").reset();
+    console.log('fd')
+    window.location.reload()
+    // Или можно сбросить реактивные переменные (v$ в вашем случае):
+    // v$.value.name = ''; // Пример: сброс поля "name"
+    // v$.value.email = ''; // Пример: сброс поля "email"
+    // v$.value.$reset(); // Если у вас есть метод $reset() в v$.value, используйте его.
+  }
+});
 </script>
 
 <style lang="scss" scoped>
