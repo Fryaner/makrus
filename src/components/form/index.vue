@@ -230,14 +230,22 @@ function formatPhoneNumber() {
       }
     }
 
+    function reload() {
+    console.log('f')
+    window.location.reload()
+}
+
+
 async function send(event) {
     const result = await v$.value.$validate()
     if (!result) {
         event.preventDefault()
         return
+    } else {
+        reload();
     }
-    window.location.reload()
 }
+
 const selectedOne = ref('')
 const selectedOneOther = ref('')
 
