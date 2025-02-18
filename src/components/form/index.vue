@@ -71,7 +71,7 @@
                                 <div class="form__btns-main">
                                     <button type="button" class="form__send" :disabled="!(selectedOne || selectedOneOther)" @click="store.stage++" >Даллее</button>
                                 </div>
-                                <button class="form__skip" type="button" @click="store.stage++">Пропустить вопрос</button>
+                                <button class="form__skip" type="button" @click="skipQuestion1()">Пропустить вопрос</button>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                                     <button type="button" class="form__send" :disabled="!(selectedTwo || selectedTwoOther)" @click="store.stage++">Даллее</button>
                                     <button class="form__close-2" type="button"  @click="store.stage--">Назад</button>
                                 </div>
-                                <button class="form__skip" type="button" @click="store.stage++">Пропустить вопрос</button>
+                                <button class="form__skip" type="button" @click="skipQuestion2()">Пропустить вопрос</button>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                                     <button type="button" class="form__send" :disabled="!(selectedThree.length || selectedThreeOther)" @click="store.stage++">Даллее</button>
                                     <button class="form__close-2" type="button"  @click="store.stage--">Назад</button>
                                 </div>
-                                <button class="form__skip" type="button" @click="store.stage++">Пропустить вопрос</button>
+                                <button class="form__skip" type="button" @click="skipQuestion3()">Пропустить вопрос</button>
                             </div>
                         </div>
                     </div>
@@ -229,6 +229,22 @@ function formatPhoneNumber() {
         state.value.number = state.value.number.slice(0, 11);
       }
     }
+
+function skipQuestion1() {
+    selectedOne.value = ''
+    selectedOneOther.value = ''
+    store.stage++
+}
+function skipQuestion2() {
+    selectedTwo.value = ''
+    selectedTwoOther.value = ''
+    store.stage++
+}
+function skipQuestion3() {
+    selectedThree.value = []
+    selectedThreeOther.value = ''
+    store.stage++
+}
 
 async function send(event) {
     const result = await v$.value.$validate()
