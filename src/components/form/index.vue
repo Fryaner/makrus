@@ -236,6 +236,7 @@ async function send(event) {
         event.preventDefault()
         return
     }
+    window.location.reload()
 }
 const selectedOne = ref('')
 const selectedOneOther = ref('')
