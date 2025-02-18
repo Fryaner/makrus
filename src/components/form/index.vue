@@ -23,13 +23,13 @@
                 </div>
                 <div class="form__input">
                     <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
-                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" @input="formatPhoneNumber" id="name" type="tel" name="Номер телефона"/>
                     <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
                 </div>
-                <!-- <div class="form__input">
-                    <label for="name">Email</label>
-                    <input id="name" type="text" name="Email"/>
-                </div> -->
+                <div class="form__input">
+                    <label for="name">Промокод</label>
+                    <input id="name" type="text" name="Промокод"/>
+                </div>
                 <input v-show="false" v-model="store.title" name="Тип Заявки"/>
                 <div v-if="store.subTitle">
                     <input v-show="false" v-model="store.subTitle" name="Тип Обороудования"/>
@@ -147,13 +147,13 @@
                 </div>
                 <div class="form__input">
                     <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
-                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" @input="formatPhoneNumber" type="tel" name="Номер телефона"/>
                     <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
                 </div>
-                        <!-- <div class="form__input">
-                            <label for="name">Email</label>
-                            <input id="name" type="text" name="Email" />
-                        </div> -->
+                <div class="form__input">
+                    <label for="name">Промокод</label>
+                    <input id="name" type="text" name="Промокод"/>
+                </div>
                         <div class="form__bottom">
                             <div class="form__btns">
                                 <div class="form__btns-main">
@@ -176,12 +176,12 @@
                 </div>
                 <div class="form__input">
                     <label :class="{ errorText: v$.number.$errors.length }" for="name">Номер телефона</label>
-                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" type="text" name="Номер телефона"/>
+                    <input :class="{ error: v$.number.$errors.length }" v-model="state.number" id="name" @input="formatPhoneNumber" type="tel" name="Номер телефона"/>
                     <p :class="{ errorText: v$.number.$errors.length }" v-if="v$.number.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <!-- <div class="form__input">
-                    <label for="name">Email</label>
-                    <input id="name" type="text" name="Email"/>
+                    <label for="name">Промокод</label>
+                    <input id="name" type="text" name="Промокод"/>
                 </div> -->
                 <div class="form__input">
                     <label for="name">Предложение</label>
@@ -223,6 +223,12 @@ const rules = {
 
 const v$ = useVuelidate(rules, state)
 
+function formatPhoneNumber() {
+      state.value.number = state.value.number.replace(/[^0-9]/g, '');
+      if (state.value.number.length > 11) {
+        state.value.number = state.value.number.slice(0, 11);
+      }
+    }
 
 async function send(event) {
     const result = await v$.value.$validate()
