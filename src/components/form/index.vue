@@ -264,6 +264,7 @@ const selectedThreeOther = ref('')
 
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
+    store.changePopUp()
     state.value.name = ''
     state.value.number = ''
     store.isOverlay = false
