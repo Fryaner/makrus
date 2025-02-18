@@ -253,6 +253,15 @@ window.addEventListener('pageshow', (event) => {
     store.isOverlay = false
     store.isSogals = false
     store.isOpen = false
+    selectedOne.value = ''
+    selectedOneOther.value = ''
+
+    selectedTwo.value = ''
+    selectedTwoOther.value = ''
+
+    selectedThree.value = []
+    selectedThreeOther.value = ''
+    v$.value.$reset();
     // window.location.reload()
   }
 });
