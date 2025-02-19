@@ -3,7 +3,7 @@
         <div class="banners-wrapper">
         <div class="banners__info">
             <h2 class="banners__title">Установка и обслуживание всех видов фильтров</h2>
-            <h3 class="banners__sub-title">Для получения качественных услуг по установке и обслуживанию фильтров обращайтесь к нашим профиссионалам</h3>
+            <h3 class="banners__sub-title">Мы работаем по Москве и Московской области, а также выезжаем по областям: Калужская, Брянская, Тульская, Тверская, Владимирская.</h3>
         </div>
         <div class="banners__btns">
             <button @click="openModal1()" class="banners__btn-1">Получить консультацию</button>

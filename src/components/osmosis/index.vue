@@ -126,7 +126,7 @@ function openModal(text) {
         }
 
         img {
-            max-width: 360px;
+            max-width: 600px;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -138,7 +138,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 200px;
+                max-width: 350px;
             }
         }
     }
@@ -177,7 +177,7 @@ function openModal(text) {
         }
 
         img {
-            max-width: 360px;
+            max-width: 600px;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -189,7 +189,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 200px;
+                max-width: 350px;
             }
         }
     }

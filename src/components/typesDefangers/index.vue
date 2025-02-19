@@ -142,7 +142,11 @@ function openModal(text) {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-size: 65%;
+        background-size: 50%;
+
+        @media screen and (max-width: $tablet-max-width) {
+            background-size: 80%;
+        }
 
         @media screen and (max-width: $mobile-max-width) {
             background-size: contain;
@@ -190,21 +194,17 @@ function openModal(text) {
     }
 
     &__image {
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: center center;
         grid-area: Img;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-size: 65%;
 
         @media screen and (max-width: $mobile-max-width) {
             background-size: contain;
         }
 
         img {
-            max-width: 400px;
+            max-width: 600px;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -216,7 +216,7 @@ function openModal(text) {
                 "Other"
                 "Footer";
                 grid-template-columns: 1fr;
-                max-width: 300px;
+                max-width: 350px;
             }
         }
     }
@@ -251,7 +251,11 @@ function openModal(text) {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-size: 80%;
+        background-size: 50%;
+
+        @media screen and (max-width: $tablet-max-width) {
+            background-size: 80%;
+        }
 
         @media screen and (max-width: $mobile-max-width) {
             background-size: contain;
