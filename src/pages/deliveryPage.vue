@@ -17,11 +17,11 @@
             </section>
             <div class="delivery__selected">
                 <div class="delivery__cash">
-                    <p>НАЛИЧНЫМ ПУТЁМ</p>
+                    <p>Наличными</p>
                     <img src="@/assets/images/deliverySelect1.webp" alt=""/>
                 </div>
                 <div class="delivery__cashless">
-                    <p>БЕЗНАЛИЧНЫМ ПУТЁМ</p>
+                    <p>Картой или QR код</p>
                     <img src="@/assets/images/deliverySelect2.webp" alt=""/>
                 </div>
             </div>

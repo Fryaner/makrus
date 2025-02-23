@@ -4,7 +4,7 @@
         <div class="contacts__main">
             <div class="contacts__info">
                 <div class="contacts__site">
-                    <p>Оффициальный сайт компании:</p>
+                    <p>Официальный сайт компании:</p>
                     <p>ООО «МакРус»</p>
                     <p>ОГРН: 1244000006964</p>
                     <p>ИНН: 4000016583</p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="contacts__form">
-                <p class="contacts__invite">Мы очень рады помочь Вам</p>
+                <p class="contacts__invite">Мы очень рады Вам помочь</p>
                 <button @click="openModal()" class="contacts__btn">Напишите нам</button>
             </div>
         </div>

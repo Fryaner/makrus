@@ -12,7 +12,7 @@ function openModal(text) {
 
 <template>
     <section>
-        <Title><template #title>ВИДЫ ОБЕЗЖИЛЕЗИВАНИЯ</template></Title>
+        <Title><template #title>ВИДЫ ОБЕЗЖЕЛЕЗИВАНИЯ</template></Title>
         <div class="section-defangers">
             <div class="defangers">
                 <div class="defangers__image">
@@ -47,7 +47,7 @@ function openModal(text) {
                     <img src="@/assets/images/image2.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
-                        <h3 class="defangers__title">Обезжилезивание и умягчение 2 в 1</h3>
+                        <h3 class="defangers__title">Обезжелезивание и умягчение 2 в 1</h3>
                         <p class="defangers__description">2 в 1 это Классический умягчитель со специальной многокомпонентной засыпкой которая убирает из воды железо и соли жесткости (накипь, налёт на сантехнике).</p>           
                     </div>
                     <div class="defangers__other">
@@ -74,7 +74,7 @@ function openModal(text) {
                     <img src="@/assets/images/image3.webp" alt=""/>
                 </div>
                     <div class="defangers__main">
-                        <h3 class="defangers__title">Обезжилезивание с аэрацией</h3>
+                        <h3 class="defangers__title">Обезжелезивание с аэрацией</h3>
                         <p class="defangers__description">Аэрация — это система подачи большого количества воздуха компрессором в воду для активного удаления сероводорода и окисления железа. </p>           
                     </div>
                     <div class="defangers__other">
