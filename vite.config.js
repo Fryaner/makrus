@@ -22,4 +22,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    outDir: 'dist', // Стандартное значение, убедитесь, что у вас нет другого
+  }
 })
