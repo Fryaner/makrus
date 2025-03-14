@@ -14,7 +14,7 @@
             </div>
 
         </div>
-        <form action="https://formspree.io/f/mrbeyypl" @submit="send" ref="myForm" method="POST" autocomplete="off">
+        <form action="https://formspree.io/f/mqaeolnl" @submit="send" ref="myForm" method="POST" autocomplete="off">
             <div class="form__main" v-if="store.type === 1">
                 <div class="form__input">
                     <label :class="{ errorText: v$.name.$errors.length }" for="name">Имя</label>
